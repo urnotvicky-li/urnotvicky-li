@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Tomino PERSONAL USE ONLY';
+    src: url('TominoPERSONALUSEONLY.woff2') format('woff2'),
+        url('TominoPERSONALUSEONLY.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
