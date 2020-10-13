@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    background-image: url(../images/coldplay4.jpg);
+    background-position: 100%; 
+    background-repeat: repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+    }
+
+.parallax-inner {
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+
+#verse-1 p {
+    display: block;
+    text-align: center;
+    margin: 20;
+    width: 800px;
+    height: 150px;
+    background: #F5E9FF;
+    margin: 45px auto 0;
+    border: 30px transparent solid;
+    box-sizing: border-box;
+    font-family: 'damion', sans-serif;
+    font-weight: normal;
+    font-size: 45px;
+    color: #ffffff;
+}
+
+#verse-1 p:first-child{
+    text-align: center;
+    font-family: 'Damion', Arial, sans-serif;
+    background-image: url('../images/par1-2.jpg');
+  
+}
+
+#verse-1 p:nth-child(2) {
+    text-align: center;
+    color: #000000;
+    font-family: 'Damion', Arial, sans-serif;
+    background-image: url('../images/par1-2\ copy.jpg');
+    background-position: 90%; 
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+
+#verse-1 p:nth-child(3) {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Damion', Arial, sans-serif;
+    background-image: url('../images/yellowball\ copy.jpg');
+    background-position: 89%; 
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+#verse-1 p:nth-child(4) {
+    text-align: center;
+    color: #000000;
+    font-family: 'Damion', Arial, sans-serif;
+    background-image: url('../images/yellowflower.jpeg');
+    background-position: 100%; 
+}
+
+#verse-1 p:nth-child(5) {
+    text-align: center;
+    font-family: 'Damion', Arial, sans-serif;
+    background-image: url('../images/IMG_8241.JPG');
+    background-position: 10%; 
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+#verse-1 p:nth-child(6) {
+    text-align: center;
+    font-family: 'Damion', Arial, sans-serif;
+    background-image: url('../images/IMG_8241.JPG');
+    background-position: 80%; 
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+#verse-1 p:nth-child(8) {
+    color: #000000;
+    text-align: center;
+    font-family: 'Damion', Arial, sans-serif;
+    background-image: url('../images/IMG_8243.JPG');
+    background-position: center;
+    background-repeat: repeat-x;
+    object-fit: cover;
+}
+
+#verse-1 p:nth-child(7) {
+    color: #000000;
+    text-align: center;
+    font-family: 'Damion', Arial, sans-serif;
+    background-image: url('../images/IMG_8243\ copy.JPG');
+    background-position: center;
+    background-repeat: repeat-x;
+    object-fit: cover;
+}
+
+#verse-1 p:nth-child(9) {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Damion', Arial, sans-serif;
+    background-image: url('../images/IMG_8240\ copy.JPG');
+    background-position:95%;
+    background-repeat: repeat-x;
+    object-fit: cover;
+}
+
+#verse-1 p:nth-child(10) {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Damion', Arial, sans-serif;
+    background-image: url('../images/IMG_8240\ copy\ 2.JPG');
+    background-position: center;
+    background-repeat: repeat-x;
+    object-fit: cover;
+}
+
+#verse-1 p:nth-child(11) {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Damion', Arial, sans-serif;
+    background-image: url('../images/IMG_8240\ copy\ 3.JPG');
+    background-position: center;
+    background-repeat: repeat-x;
+    object-fit: cover;
+}
+
+#verse-1 p:nth-child(12) {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Damion', Arial, sans-serif;
+    background-image: url('../images/IMG_8244JPG');
+    background-position: center;
+    background-repeat: repeat-x;
+    object-fit: cover;
+}
+
+.text {
+    z-index: 2;
+    position: relative;
+}
