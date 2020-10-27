@@ -1,0 +1,31 @@
+body {
+    background-image: url('../images/yellow-1.jpg');
+    background-position: 100%;
+    background-repeat: repeat-x repeat-y;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+.container {
+        display: block;
+        text-align: center;
+        margin: 20;
+        width: 800px;
+        height: 500px;
+        background: #F5E9FF;
+        margin: 45px auto 0;
+        border: 30px transparent solid;
+        box-sizing: border-box;
+        font-family: 'damion', sans-serif;
+        font-weight: normal;
+        font-size: 45px;
+        color: #ffffff;
+    }
+#container: all :nth-child(1-11) {
+    text-align: center;
+}

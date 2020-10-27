@@ -9,6 +9,7 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
     object-fit: cover;
+    position: relative;
     }
 
 .parallax-inner {
@@ -16,6 +17,9 @@ body {
     padding-bottom: 30%;
 }
 
+#container {
+    position: absolute;
+}
 
 #verse-1 p {
     display: block;
@@ -37,7 +41,6 @@ body {
     text-align: center;
     font-family: 'Damion', Arial, sans-serif;
     background-image: url('../images/par1-2.jpg');
-  
 }
 
 #verse-1 p:nth-child(2) {
