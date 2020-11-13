@@ -9,15 +9,10 @@ body
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    cursor: url('../images/kisspng-firefly-illustration-insect-clip-art-collage-japanese-english-dictionar-5bab3e74aad3d6.2925351115379493006997.png'),auto;
+    cursor: url('../images/firefly.png'),auto;
     background: radial-gradient(#55efc4, #55efc4);
+}
 
-.cursor{
-    widows: 20px;
-    height: 20px;
-    border: 1px solid #000000;
-}
-}
 .box
 {
     display: flex;
@@ -33,7 +28,7 @@ body
     border-radius: 50%;
     box-shadow: 0 5px 45px rgba(0,0,0,0.2),
                 inset 0 0 15p x#55efc4,
-                inset 0 0 25px #55efc4;
+                inset 0 0 25px #55efc4; 
 }
 .box .eye::before
 {

@@ -1,13 +1,21 @@
-    document.querySelector('body').addEventListener('mousemove', eyeball);
+window.addEventListener("load", function() {
 
-    function eyeball(){
-        const eye = document.queryselectorALL('.eye');
-        eye.forEach(function(eye){
-            let x = (eye.getBoundingClientRect().left) + (eye. clientWidth / 2);
-            let y = (eye.getBoundingClientRect().top) + (eye. clientWidth / 2);
+    document.body.addEventListener('mousemove', moveEyes);
 
-            let radian = Math.atan2 (Event.pageX - x, Event.pageY - y);
-            let rotation = (radian * (180 / Math.PI) * -1) +270;
-            eye.style.transform = "rotate("+rotation+"deg)"
+
+    function moveEyes(e){
+            var eyes = document.querySelectorAll('.eye');
+
+            eye.forEach(function(eye){
+
+            var x = (eye.getBoundingClientRect().left) + (eye.getBoundingClientRect().Width / 2);
+            var y = (eye.getBoundingClientRect().top) + (eye.getBoundingClientRect().height / 2);
+
+            var radian = Math.atan2 (e.pageX - x, e.pageY - y);
+            var rotation = (radian * (180 / Math.PI) * -1) +180;
+
+            eye.style.transform = 'rotate('+rotation+ 'deg)';
         });
     }
+
+});
