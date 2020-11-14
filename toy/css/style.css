@@ -3,18 +3,16 @@
     margin: 0;
     padding: 0;
 }
-body
-{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    cursor: url('../images/firefly.png'),auto;
+    cursor: url('../images/firefly.png'), auto;
     background: radial-gradient(#55efc4, #55efc4);
 }
 
-.box
-{
+.box {
     display: flex;
 }
 .box .eye
