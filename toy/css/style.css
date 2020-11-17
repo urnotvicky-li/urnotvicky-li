@@ -8,12 +8,17 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    cursor: url('../images/60px_cartoonbee.png'), auto;
+    cursor: url('../images/-25_e_2.png'), auto;
     background: radial-gradient(#55efc4, #55efc4);
 }
 
 .box{
     display: flex;
+    animation-name: blink;
+    animation-timing-function: ease-in-out;
+    animation-direction: forwards;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
 }
 
 .box .eye{
@@ -27,7 +32,9 @@ body{
     box-shadow: 0 5px 45px rgba(0,0,0,0.2),
                 inset 0 0 15px #55efc4,
                 inset 0 0 25px #55efc4; 
+    animation: move 5s ease-out infinite;
 }
+ 
 
 .box .eye::before{
     content: '';
@@ -42,3 +49,8 @@ body{
     border: 10px solid #2196f3;
     box-sizing: border-box;
 }
+
+@keyframes blink {
+    0%, 2%, 60%, 62%, 100% { transform: scaleX(1) scaleY(1); } 
+    1%, 61% { transform: scaleX(1) scaleY(0.1); } 
+  }
