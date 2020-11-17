@@ -1,24 +1,22 @@
-*
-{
+*{
     margin: 0;
     padding: 0;
 }
-body
-{
+
+body{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    cursor: url('../images/firefly.png'),auto;
+    cursor: url('../images/60px_cartoonbee.png'), auto;
     background: radial-gradient(#55efc4, #55efc4);
 }
 
-.box
-{
+.box{
     display: flex;
 }
-.box .eye
-{
+
+.box .eye{
     position: relative;
     width:120px;
     height: 120px;
@@ -27,11 +25,11 @@ body
     margin: 0 20px;
     border-radius: 50%;
     box-shadow: 0 5px 45px rgba(0,0,0,0.2),
-                inset 0 0 15p x#55efc4,
+                inset 0 0 15px #55efc4,
                 inset 0 0 25px #55efc4; 
 }
-.box .eye::before
-{
+
+.box .eye::before{
     content: '';
     position: absolute;
     top: 50%;
@@ -44,11 +42,3 @@ body
     border: 10px solid #2196f3;
     box-sizing: border-box;
 }
-
-.nose
-
-.container
-
-.mouth
-
-
