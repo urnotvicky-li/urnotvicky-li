@@ -2,17 +2,29 @@
     margin: 0;
     padding: 0;
 }
+<<<<<<< HEAD
 
 body{
+=======
+body {
+>>>>>>> 053a8c4a3cfb8a7d5c9c6b27743e6f323a983438
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+<<<<<<< HEAD
     cursor: url('../images/-25_e_2.png'), auto;
     background: radial-gradient(#55efc4, #55efc4);
 }
 
 .box{
+=======
+    cursor: url('../images/firefly.png'), auto;
+    background: radial-gradient(#55efc4, #55efc4);
+}
+
+.box {
+>>>>>>> 053a8c4a3cfb8a7d5c9c6b27743e6f323a983438
     display: flex;
     animation-name: blink;
     animation-timing-function: ease-in-out;
