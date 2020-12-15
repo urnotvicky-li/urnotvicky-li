@@ -14,24 +14,20 @@ nav {
 }
 
 nav ul {
-    display: flex;
+    float: right;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.info {
-    background: grey;
-    width: 100px;
-    height: 40px;
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 23px;
+    position: relative;
 }
 
-#tickets-info {
-    background-position: right;
-    height: 40px;
-    width: 100px;
-    background: gray;
-}
+
 
 .container {
     background: white;
