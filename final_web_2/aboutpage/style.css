@@ -1,11 +1,13 @@
 body {
     width: 100vw;
     height: 100vh;
-    background: #000;
     margin: 0;
-    background-image: url();
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	font-weight: 800;
+  font-weight: 800;
+  background-image: url("../images/nycbg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
@@ -74,48 +76,24 @@ nav a:hover::before {
   width: 100%;
 }
 
-
-
-ul,
-li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-button {
-    border: 0;
-    padding: 0;
-    background: transparent;
-    text-decoration: underline;
-}
-
-#carousel-list {
+.info {
+    text-align: center;
     margin: auto;
-    width: 90vw;
-    position: relative;
-    height: 60vw;
-    background:black;
+    width: 80%;
+    height: 100%;
+    font-size: 25px;
+    font-family: Verdana;
+    position: relative;  
+    top: 150px; 
 }
 
-#carousel-list img {
-    width: 100%;
+h1 {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 30px;
+    font-size: 25px;
 }
-
-#carousel-list li {
-    position: absolute;
-    width: 100%;
-    opacity: 0;
-    transition: opacity .5s ease-out;
-}
-
-#carousel-controls {
-    margin: 15px auto 0;
-    width: 60vw;
-    display: flex;
-    justify-content: space-between;
-}
-
-#carousel-list li:nth-child(1) {
-    opacity: 1;
+h3 {
+  color: #ffffff;
+  font-size: 20px;
 }
