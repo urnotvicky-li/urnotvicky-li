@@ -16,7 +16,8 @@ body {
 }
 
 header {
-  background: #55d6aa;
+  width: 90%;
+  left: 20px;
 }
 
 header::after {
@@ -49,21 +50,21 @@ nav li {
 }
 
 nav a {
-  color: #444;
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
 }
 
 nav a:hover {
-  color: #000;
+  color: #ffffff
 }
 
 nav a::before {
   content: '';
   display: block;
   height: 5px;
-  background-color: #444;
+  background-color: #ffffff;
 
   position: absolute;
   top: 0;
@@ -79,7 +80,7 @@ nav a:hover::before {
 .info {
     text-align: center;
     margin: auto;
-    width: 80%;
+    width: 60%;
     height: 100%;
     font-size: 25px;
     font-family: Verdana;
@@ -96,4 +97,5 @@ h1 {
 h3 {
   color: #ffffff;
   font-size: 20px;
+  line-height: 40px;
 }

@@ -4,8 +4,8 @@ window.addEventListener("load", function() {
     var carouselSlides = document.querySelectorAll('.carousel-slide');
     var currentSlide = 0;
     var total = carouselSlides.length;
-    var nextBtn = document.querySelector('#next-btn');
-    var prevBtn = document.getElementById('prev-btn');
+    /*var nextBtn = document.querySelector('#next-btn');
+    var prevBtn = document.getElementById('prev-btn');*/
     var timer;
 
 

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html> 
     <head>
-        <title>Carousels</title>
+        <title>Chang's Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <script src="global.js"></script>
     </head>
@@ -11,7 +13,6 @@
             <div class="container">
                 <h1 id="title"><a href="/">Chang Li</a>
                     <a style="text-decoration: none;"></a>
-    
                 <nav>
                   <ul>
                     <li><a href="#">Home</a></li>
@@ -21,34 +22,35 @@
               </div>     
         </header>
         
-        <ul id="carousel-list">
+        <ul class="carousel-list">
+            <input type="radio" id="control-1" name="control" checked>
+            <input type="radio" id="control-2" name="control">
+            <input type="radio" id="control-3" name="control">
+            <input type="radio" id="control-4" name="control">
+        
+        
             <li class="carousel-slide">
-                <img src="images/mac_book1.png" alt="A tiny kitten"/>
+                <a href="croppedletterpage/cropped_letter.html" target="_blank">
+                <img src="images/pattern1.png" alt="1" width="3000" height="2000"></a>
             </li>
             <li class="carousel-slide">
-                <img src="images/mac_book2.png" alt="A bird of some kind"/>
+                <img src="images/landing_mantra.png" alt="2"/>
             </li>
             <li class="carousel-slide">
-                <img src="images/mac_book3.jpg" alt="A chipmunk"/>
+              <img src="images/landing-wikibook.png" alt="3"/>
             </li>
             <li class="carousel-slide">
-                <img src="images/landing_poster.png" alt="A lemur"/>
+              <img src="images/landing-poster.png" alt="4"/>
             </li>
-            <li class="carousel-slide">
-                <a href="../final_web_2/croppedletterpage/cropped_letter.html" id="bottle" ></a>
-                <img src="images/landing_pattern.png" alt="pattern"/>
-            </li>
-            <li class="carousel-slide">
-                <img src="images/landing_mantra.png" alt="A hedgehog"/>
-            </li>
-        </ul>
+        
+            <div class="controls-visible">
+              <label for="control-1"></label>
+              <label for="control-2"></label>
+              <label for="control-3"></label>
+              <label for="control-4"></label>
+            </div>
+          </ul> 
 
-        <section id="carousel-controls">
-            <button id="prev-btn">Previous</button>
-            <button id="next-btn">Next</button>
-        </section>
-
-
-  
+       
     </body>
 </html>
