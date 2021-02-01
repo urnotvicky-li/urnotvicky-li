@@ -1,0 +1,74 @@
+body {
+    background: #FADCD9;
+    background-image: url(../images/back01.jpg);
+    background-size: 100%;
+}
+
+@font-face {
+    font-family: 'PWYummyDounts';
+    src: url(../fonts/PWYummyDonuts\ copy.ttf);
+    font-style: normal;
+    font-weight: 100px;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+h1 {
+    font-family: 'PWYummyDounts';
+    text-align: center;
+    top: 0;
+    font-size: 50px;
+}
+
+.box2 {
+    height: 50%;
+    position: absolute;
+}
+
+.img1 {
+    width: 100px;
+    height: auto;
+    position: fixed;
+    left: 5px;
+    bottom: 0;
+}
+
+.center {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 60%;
+    margin-top: 10px;
+}
+
+button {
+    /* background-color: cornflowerblue; */
+    background-color: #ef4f4f;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 5px;
+    width: 150px;
+    height: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #e7e7de;
+    
+}
+
+button:active {
+    background-color: #d4e2d4;
+}
