@@ -72,3 +72,8 @@ button:hover {
 button:active {
     background-color: #d4e2d4;
 }
+
+.bgm {
+    padding-left: 100px;
+    width: 140px;
+}
