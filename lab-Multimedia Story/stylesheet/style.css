@@ -1,0 +1,97 @@
+body {
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blanchedalmond;
+}
+
+section {
+    border: 10px;
+    height: 90vh;
+}
+
+.container {
+    border: 10px;
+    max-width: 700px;
+    margin: auto;
+
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 50px;
+    color:black;
+} 
+
+a {
+    color: blanchedalmond;
+}
+/* .container2 {
+    border: 10px solid black;
+    max-width: 700px;
+    margin: auto;
+
+    height: 100px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+.b {
+position: absolute;
+left: 50%;
+bottom: 60%;
+
+}
+
+.c {
+    position: absolute;
+    right: 70%;
+    top: 25%;
+}
+
+.d {
+    position: absolute;
+    right: 19%;
+    top: 45%;
+}
+
+.e {
+    position: absolute;
+    right: 30%;
+    top: 25%;
+}
+
+.f {
+    position: absolute;
+    left: 20%;
+    bottom: 10%;
+}
+
+.g {
+    position: absolute;
+    left: 30%;
+    bottom: 50%;
+}
+
+.h {
+    position: absolute;
+    left: 55%;
+    bottom: 30%;
+}
+
+.i {
+    position: absolute;
+    left: 14%;
+    bottom: 80%;
+}
+
+.j {
+    position: absolute;
+    top:80%;
+    left: 79%;
+}
