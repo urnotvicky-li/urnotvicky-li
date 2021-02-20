@@ -1,0 +1,68 @@
+/* CSS files add styling rules to your content */
+@font-face {
+    font-family: "PWYummyDonuts";
+    src: url("PWYummyDonuts");
+      }
+
+body {
+  font-family: "PWYummyDonuts", sans-serif;
+  background-image: linear-gradient(to left bottom, #e0a1c5, #d6a1ce, #c8a1d6, #b8a3de, #a5a5e3, #96adea, #86b5ef, #77bdf0, #75cbf2, #7cd9f1, #8ce5ee, #a1f0eb);
+  height: auto;
+  width: 100%;
+  min-width: 60%;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-style: bold;
+  color: #000000;
+  font-size: 50px;
+  text-align: center;
+}
+
+.box1 {
+  width: 70%;
+  min-width: 700px;
+  height: 40vh;
+  margin: auto;
+
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  height: auto;
+  font-size:30px;
+}
+
+.center1 {
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+p {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  width: 70%;
+  min-width: 700px;
+  height: 40vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size:30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.instagram-media { 
+  margin: auto;
+  width: auto;
+  height: 60%;
+  display: inline-block;
+  text-align: center;
+}

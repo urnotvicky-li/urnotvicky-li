@@ -1,0 +1,53 @@
+.droplet {
+  margin: 50px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: blue;
+  /* create droplet shape */
+  border-radius: 50%;
+  border-top-right-radius: 0;
+  transform: rotate(-45deg);
+  /* create animation keyframe name */
+  animation-name: droplets;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  animation-timing-function: ease-in;
+  
+}
+
+@keyframes droplets {
+  0% {background-color: blue; top: 50px; }
+  25% {background-color:gre(159, 9, 84); top: 550px; }
+  50% {background-color: green (77, 4, 40); top: 300px; }
+  75% {background-color: rgb(130, 112, 121); top: 700px; }
+  100% {background-color: wheat; top: 800px; border-radius: 50% 50% 70% 50% }
+}
+
+.droplet2 {
+  margin: 300px;
+  width: 200px;
+  height: 100px;
+  position: relative;
+  background-color:orange;
+  /* create droplet shape */
+  border-radius: 20%;
+  border-top-right-radius: 0;
+  transform: rotate(-45deg);
+  /* create animation keyframe name */
+  animation-name: droplets;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  animation-timing-function: ease-in;
+  
+}
+
+@keyframes droplets2 {
+  0% {background-color: black; top: 50px; }
+  25% {background-color:gre(159, 9, 84); top: 550px; }
+  50% {background-color: green (77, 4, 40); top: 300px; }
+  75% {background-color: rgb(130, 112, 121); top: 700px; }
+  100% {background-color: wheat; top: 800px; border-radius: 50% 50% 70% 50% }
+}
