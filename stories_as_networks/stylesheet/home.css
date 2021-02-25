@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "A-OTF";
+    src: url("/fonts/A-OTF-KochoStd-Heavy-2.woff") format("woff");
+  }
+
+body {
+    background-color: white;
+    height: 100vh;
+}
+
+section {
+    /* border: 10px solid white; */
+    height: 100vh;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    position: relative;
+}
+
+.container {
+    border: 10px solid black;
+    background-color: white;
+    max-width: 600px;
+    width: 100%;
+    color: black;
+
+    height: 50vh;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    display: grid;
+}
+
+
+.grid {
+   border:10px blue;
+    /* outline: 10px blue; */
+    display: grid;
+    width: 400px;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    grid-auto-rows: 100px;
+    grid-template-areas:
+    "a a a a b b b b"
+    "a a a a b b b b"
+    "c c c c d d d d"
+    "c c c c d d d d";
+    align-items: start;
+}
+
+.item1 {
+    grid-area: a;
+}
+
+.item2 {
+    grid-area: b;
+}
+
+.item3 {
+    grid-area: c;
+}
+
+.item4 {
+    grid-area: d;
+}

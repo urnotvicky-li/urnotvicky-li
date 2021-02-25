@@ -1,0 +1,14 @@
+body {
+    font-family: 'Source Code Pro', sans-serif;
+  }
+.wrap {
+    padding: 10% 20%;
+}
+h2 {
+    margin-top: 3em;
+    color: grey;
+    first-child {
+      margin-top: 0;
+    }
+}
+  
