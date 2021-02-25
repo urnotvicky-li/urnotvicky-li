@@ -1,7 +1,9 @@
-@font-face {
+/* @font-face {
     font-family: "A-OTF";
     src: url("/fonts/A-OTF-KochoStd-Heavy-2.woff") format("woff");
-  }
+  } */
+
+  @import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
 
 body {
     background-color: white;
@@ -71,4 +73,14 @@ section {
 
 .item4 {
     grid-area: d;
+}
+
+
+.kanji {
+    font-size: 40px;
+}
+
+.kanji h3 {
+    font-size: 20px;
+    font-family: 'Public Sans', sans-serif;
 }

@@ -1,144 +1,112 @@
-
-@font-mono: "Cutive Mono", monospace;
-
-@ease-cb: cubic-bezier(.19,1,.22,1);
-
-
-@description: Transition Delay on nth-childs
-@param: $delay_items: [7]    - number of nth-of-type items to create
-//  @param: $delay_time:[1.5s]   - transition-dealy value
-
-
-@mixin nth-trans-delay($delay_items: 7, $delay_time: 0.2s){
-@for $i from 1 through $delay_items {
-  &:nth-child(#{$i}) {   
-   transition-delay: $delay_time * $i; 
-  }
- }
-}
-
-
-
-//  @description: Animation Delay on nth-childs
-//  @param: $delay_items: [7] - number of nth-of-type items to create
-//  @param: $delay_time:[1.5s] - transition-dealy value
-//--------------------------
-@mixin nth-ani-delay($delay_items: 7, $delay_time: 0.2s){
-@for $i from 1 through $delay_items {
-  &:nth-child(#{$i}) {   
-   animation-delay: $delay_time * $i; 
-  }
- }
-}
-
-//  bg-overlay()
-//  @description:pseduo overlay element  
-//  @param: $bg_hex: [$color-dark] - hex value for rgba conversion
-//  @param: $bg_opacity:[0.6] - alpha transparency level
-//  @param: $top_layer: element or class name for higher z-index layer
-//--------------------------
-@mixin bg-overlay($bg_hex: #111, $bg_opacity: 0.6, $top_layer: 'header') {
-  &:after {
-    z-index: 0;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba($bg_hex, $bg_opacity);
-  }
-  
-
-  & > #{$top_layer}{
-    z-index: 2;
-    position: relative;
-  }
-}
-
-*, *:before, *:after {
-  box-sizing: border-box; 
-}
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
 
 body {
-  margin: 0;
-  width: 100%;
-  font-family: $font-mono;
-  line-height: 1.5;
-  font-weight: 400;
-  font-style: normal;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; 
-  text-rendering: optimizeLegibility;
-}
-
-.sep{
-  border: 0;
-  width: 3em;
-  height: 1px;
-  margin: 1em 0;
-  background-color: rgba(255,255,255,0.4);
-}
-
-.mast{
-  position: relative;
-  display:flex;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  color: #fff;
-  background-color: #111;
-  @include bg-overlay(#111, 0.9);  
-  
-  &__bg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-position: 50%;
-  }
-  
-  &__header{
-    padding: 5%;
-  }
-  &__title{
-    font-family: $font-mono;
-    font-size: 1em;
-    font-weight: 400;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-  }
-  // Letter animation
-  &__title span{
-    animation: letter-glow 0.7s 0s ease both;
-    @include nth-ani-delay(25, 0.05s);
-  }
-  //Letter animation
-  &__text{
-    font-family: $font-mono;
-    font-size: 1em;
-    margin: 0 0 0.5em;
-    line-height: 1.5;
-    white-space: pre;
-  }
-  
-  &__text span{
-    animation: letter-glow 0.7s 0s ease both;
-    @include nth-ani-delay(180, 0.05s);
-  }
+    background-color: black;
+    font-family: 'Public Sans', sans-serif;
+}
+
+section {
+    height: 80vh;
+    border: 10px blue;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    color: white;
+    margin: auto;
+    max-width: 1100px;
+    width: 100%;
+
+    height: 70px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+@media only screen and (min-width:767px) {
+
+    .container {
+        background: black;
+        color: #939393;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+}
+
+/* span{ 
+    font-size: 60px; 
+    display: inline-block; 
+    top: 50%;
+}
+ 
+span b { 
+     font-size: 60%; 
+    }
+
+.underline-on-hover:hover {
+    text-decoration: underline solid white 30px;
+} */
+
+p {
+    display: inline-block;
+    font-size: 30px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+p a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.sliding-u-l-r-l {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 14px;
+    font-size: 60px;
+}
+.sliding-u-l-r-l:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 8px;
+    width: 0;
+    transition: width 0s ease; 
+    background: .5s ease;
+}
+.sliding-u-l-r-l:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 8px;
+    width: 0;
+    background: #ffffff;
+    transition: width .5s ease;
+}
+.sliding-u-l-r-l:hover:before {
+    width: 100%;
+    background: #FFD700;
+    transition: width .5s ease;
+}
+.sliding-u-l-r-l:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
 }
 
 
-// Letter Glow
-@keyframes letter-glow{
-  0%   { opacity: 0; text-shadow: 0px 0px 1px rgba(255,255,255,0.1)}
-  66%  { opacity: 1; text-shadow: 0px 0px 20px rgba(255,255,255,0.9) }
-  77%   { opacity: 1;  }
-  100% { opacity:0.7; text-shadow: 0px 0px 20px rgba(255,255,255,0.0)}
-}
+
+
+
