@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
+
 h1 {
     border-left: 2px solid white;
     height: 100px;
@@ -6,8 +8,8 @@ h1 {
 }
 
 body {
-    background-color:white;
-    color: black;
+    background-color:black;
+    color: white;
 }
 
 .top-container {
@@ -19,11 +21,8 @@ body {
 
 }
 
-
-
-
-
 .intro-text {
+    color: white;
     width: 50%;
     opacity: 0;
     transform: translateY(20px);
@@ -31,7 +30,37 @@ body {
 }
 
 .intro-appear {
+    color: white;
     opacity: 1;
     transform: translateY(0px);
 }
+
+.container {
+    width: 70%;
+    height: ;
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Public Sans', sans-serif;
+
+    line-height: 0.4in;
+    font-weight: lighter;
+    margin: auto;
+}
+
+@media only screen and (max-width:1100px) {
+
+    .container {
+        background: white;
+        padding: 30px;
+        color: #939393;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+    }
+
+
+
+
 
