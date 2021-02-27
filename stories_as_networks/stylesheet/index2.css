@@ -11,7 +11,7 @@ body {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
     grid-gap: 10px;
-    background: #ddd;
+    background: white;
 
     position: absolute;
     top: 50%;

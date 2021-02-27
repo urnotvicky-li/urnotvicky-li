@@ -2,7 +2,7 @@
 
 body {
     /* height: 100vh; */
-    background-color: black;
+    background-color: white;
     font-family: 'Public Sans', sans-serif;
 }
 
@@ -32,10 +32,68 @@ p a{
     text-align: center;
     justify-content: center;
 }
+.sliding-u-l-r-l-jp {
+    display: none;
+}
+
+.sliding-u-l-r-l-en {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 14px;
+    font-size: 60px;
+}
+.sliding-u-l-r-l-en:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 8px;
+    width: 0;
+    transition: width 0s ease; 
+    background: .5s ease;
+}
+.sliding-u-l-r-l-en:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 8px;
+    width: 0;
+    background: #ffffff;
+    transition: width .5s ease;
+}
+.sliding-u-l-r-l-en:hover:before {
+    width: 100%;
+    background: #FFD700;
+    transition: width .5s ease;
+}
+.sliding-u-l-r-l-en:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (min-width:767px) {
 
+    .sliding-u-l-r-l-en {
+        display: none;
+    }
+
     section {
+        width: 100%;
         background: black;
         color: #939393;
         position: absolute;
@@ -64,13 +122,13 @@ p {
     font-family: 'Public Sans', sans-serif;
 } */
 
-.sliding-u-l-r-l {
+.sliding-u-l-r-l-jp {
     display: inline-block;
     position: relative;
     padding-bottom: 14px;
     font-size: 60px;
 }
-.sliding-u-l-r-l:before {
+.sliding-u-l-r-l-jp:before {
     content: '';
     display: block;
     position: absolute;
@@ -81,7 +139,7 @@ p {
     transition: width 0s ease; 
     background: .5s ease;
 }
-.sliding-u-l-r-l:after {
+.sliding-u-l-r-l-jp:after {
     content: '';
     display: block;
     position: absolute;
@@ -92,12 +150,12 @@ p {
     background: #ffffff;
     transition: width .5s ease;
 }
-.sliding-u-l-r-l:hover:before {
+.sliding-u-l-r-l-jp:hover:before {
     width: 100%;
     background: #FFD700;
     transition: width .5s ease;
 }
-.sliding-u-l-r-l:hover:after {
+.sliding-u-l-r-l-jp:hover:after {
     width: 100%;
     background: transparent;
     transition: all 0s ease;
