@@ -37,7 +37,7 @@ body {
 
 .container {
     width: 70%;
-    height: ;
+    height: 100vh;
     text-align: left;
     font-size: 30px;
     font-family: 'Public Sans', sans-serif;
