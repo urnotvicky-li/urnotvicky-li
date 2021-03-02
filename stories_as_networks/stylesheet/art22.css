@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;400;700&display=swap');
 
-
 body {
     background: #A0A0A0;
     color: #222;
@@ -25,13 +24,13 @@ main h2 {
 
 main h1 {
     font-size: 2rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Public Sans', sans-serif,"Times New Roman", serif ;
     line-height: 2.1rem;
     text-transform: uppercase;
     display: inline-block;
-    text-align: center;
+    text-align: left;
 
-    margin:200px 0 200px 15px;
+    margin:200px 15px;
     color: #E9E7EC;
     text-shadow: 
    /* create highlights on the left */
@@ -56,10 +55,10 @@ main .text {
     position: relative;
     justify-items: center;
 }
-main .text h3 {
+/* main .text h3 {
     font-size: 1.2em;
     margin: 200px 0 300px 0;
-}
+} */
 
 main .text p {
     margin-top: 0;
@@ -68,11 +67,18 @@ main .text p {
     text-align:inherit;
     font-family: 'Public Sans', sans-serif, Arial, Helvetica, sans-serif ;
 }
+.pretag {
+display: none;
+}
+.pretag-en {
+    display: none;
+}
 
-@media (min-width: 300px) {
+@media (min-width: 500px) {
     main {
         width: 65%;
    }
+
 main h1 {
     font-size: 2.1rem;
     line-height: 1.25;
@@ -95,6 +101,17 @@ main h1 {
     }
 }
 
+@media only screen and (min-width:500px) and (max-width:1240px) {
+    .pretag {
+        font-size: 2em;
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+    }
+    .pretag-en {
+        display: none;
+    }
+   
+   }
 
 @media only screen and (min-width:1240px) {
     main .text {
@@ -106,6 +123,7 @@ main h1 {
     }
     main .text-jp {
         display: inline-block;
+        font-family: 'Noto Serif JP', serif;
     }
 
     body {
@@ -135,6 +153,7 @@ main h1 {
         padding:4%;
         box-shadow: 22px 15px #B2B2B2;
         margin-bottom: 100px;
+        font-family: 'Noto Serif JP', serif;
     }
 
     main .text-jp p {
@@ -142,13 +161,47 @@ main h1 {
         margin-bottom: 2em;
         font-size: 20px;
         color: #E9E7EC;
+        font-family: 'Noto Serif JP', serif;
     }   
 
     main h3 {
         display: none;
     }
+
+    .pretag-en {
+        font-size: 2em;
+        font-family: 'Public Sans', sans-serif,"Times New Roman", serif ;
+        font-weight: 700;
+        color: white;
+    }
+    .pretag {
+        display: none;
+    }
+}
+
+.link1 {
+    font-size: 1.5em;
+    text-decoration:dotted solid white 2px;
+    color: inherit;
+}
+
+.link1 a {
+    margin: 10px 5px;
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    margin: o;
+    width: 50vw;
 }
 
 a {
-    margin: 10px 5px;
+    color: black;
+    font-size: 1.5em;
+    margin: 30px 15px;
+    text-decoration: none;
+    word-spacing: 60px;
+    
 }
+

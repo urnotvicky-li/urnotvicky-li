@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700;900&display=swap');
 
 body {
-    background-image: linear-gradient(to right top, #f0f4d8, #f0efd5, #f0ead2, #efe5d0, #ede0cf, #eeded1, #eddcd4, #ebdad6, #e9dbdc, #e5dde0, #e1dfe1, #e0e0e0);
+    background-image: linear-gradient(to left bottom, #252524, #42423f, #60605c, #81817a, #a3a39a, #adada3, #b7b7ad, #c1c1b6, #b5b5aa, #a8a89f, #9c9c93, #909088);
     background-size: 400% 400%;
     animation: gradient 9s ease infinite;
 
@@ -186,7 +186,13 @@ main {
 }
 
 
+main .connection .one .two {
+    word-spacing: 60px;
+    margin: auto 0;
+    text-decoration: none;
+    color: inherit;
 
+}
 a.one:link {color:black;} 
 a.one:hover {background:white;}
 

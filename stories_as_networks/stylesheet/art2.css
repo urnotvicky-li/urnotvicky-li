@@ -10,6 +10,10 @@ body {
     margin: 0;
 }
 
+.dot {
+    text-decoration: dotted solid white 4px;
+}
+
 main {
     height: 100%;
     width: 100vw;
@@ -142,6 +146,11 @@ main .text h4 {
     }
 }
 
+@media only screen and (min-width:0px) and (max-width:1240px) {
+ pre {
+
+ }
+}
 
 @media only screen and (min-width:1240px) {
 .text {
@@ -201,59 +210,7 @@ main {
     
   }
 
-/* /hover text/ */
-/* .wrap {
-    padding: 10% 20%;
-}
-
-p {
-    font-size: 28px;
-    color: white;
-}
-h2 {
-    margin-top: 3em;
-    color: grey;
-}
-h2:first-child {
-    margin-top: 0;
-}
-.keysentence {
-    color:black;
-    flex: 1;
-    font-size: 1.5em;
-    line-height: 1.2;
-    font-weight: bold;
-    text-decoration: none;
-    background-image: linear-gradient(to right, yellow 0, yellow 100%);
-    background-position: 0 1.2em;
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    transition: background 0.5s;
-}
-.underlined:hover {
-    background-size: 100% 100%;
-}
-.underlined--thin {
-    background-image: linear-gradient(to right, black 0, black 100%);
-}
-.underlined--thick {
-    background-position: 0 -0.1em;
-}
-.underlined--offset {
-    background-position: 0 0.2em;
-    box-shadow: inset 0 -0.5em 0 0 white;
-}
-.underlined--gradient {
-    background-position: 0 -0.1em;
-    background-image: linear-gradient(to right, yellow 0, lightgreen 100%);
-}
-.underlined--reverse {
-    background-position: 100% -0.1em;
-    transition: background 1s;
-    background-image: linear-gradient(to right, yellow 0, yellow 100%);
-} */
-
-.arrow {
+/* .arrow {
     border: solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
@@ -269,4 +226,4 @@ h2:first-child {
   .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
-  }
+  } */
