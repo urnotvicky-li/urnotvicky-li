@@ -1,102 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;400;700&display=swap');
 
 body {
-    background-image: radial-gradient(circle, #eed5bb, #f4d6b2, #f8d7a9, #fcd8a0, #feda96, #fed38f, #ffcd88, #ffc682, #ffb580, #fca681, #f79784, #ee8989);
-    font-family: 'Public Sans', sans-serif,"Times New Roman", serif ;
-    line-height: 1.3;
-    -webkit-font-smoothing: antialiased;
-    margin: 0;
-}
-
-.dot {
-    text-decoration: dotted solid white 4px;
-}
-
-main {
+    background: #A0A0A0;
+    color: #222;
     height: 100%;
     width: 100vw;
-    font-family: 'Public Sans', sans-serif, Arial, Helvetica, sans-serif ;
+    font-family: 'Public Sans', sans-serif,"Times New Roman", serif ;
     font-size: 1em;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+}
+
+main {
+    margin: auto 0 auto 100px;
+    width: 100vw;
 }
 
 .text-jp {
     display: none;
 }
 
-.text h1, h2, h3, h4 {
-    /* font-family: 'Playfair Display', serif; */
-    font-family: 'Public Sans', sans-serif, Arial, Helvetica, sans-serif ;
+main h2 {
+    display: none;
 }
 
-main .text h3 {
-    font-size: 1.2em;
-    margin: 200px 0 300px 0;
-}
-
-main .text p {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 16px;
-    text-align:inherit;
-    color: black;
-}
-
-main {
-    width: 90%;
-    margin: 5em auto;
-}
-
-main .text h1 {
+main .text .extra1 {
     text-align: left;
-    font-size: 30px;
-    line-height: 1.25;
+    font-size: 1.2em;
+    margin: 70px 0;
+    font-weight: bolder;
+    font-weight: 800;
+}
+
+main h1 {
+    font-size: 2rem;
+    font-family: 'Public Sans', sans-serif,"Times New Roman", serif ;
+    line-height: 2.1rem;
     text-transform: uppercase;
-    margin:200px 0 100px 0;
-}
+    display: inline-block;
+    text-align: left;
 
-a {
-    text-decoration: none;
-    color: lightslategray;
-}
-
-
-@media only screen and (min-width: 700px) {
-    main {
-        width: 70%;
-    }
-
-    main .text p {
-    margin-top: 0;
-    margin-bottom: 1.5em;
-    font-size: 1.3em;
-    line-height: 1.5em;
-    }
-
-    main .extra1 {
-        text-align:right;
-        font-size: 1.8em;
-        color:#252424;
-        font-weight: bolder;
-        margin: 80px 0;
-    }
-    main .extra1 p {
-        width: 40%;
-    }
-    main .text h3 {
-        font-size: 1.5em;
-        margin: 200px 0 300px 0;
-    }
-}
-
-main .text h4 {
-  margin: 0;
-  font-size: 18px;
-  color: lightgrey;
-  text-shadow: 
+    margin:200px 15px;
+    color: #E9E7EC;
+    text-shadow: 
    /* create highlights on the left */
     0px 0.5px 0px rgba(255,255,255, 0.2), 
     -1px 1px 0px rgba(255,255,255, 0.2), 
@@ -105,145 +53,168 @@ main .text h4 {
     30px 1px 0px rgba(0,0,0, 0.2),
     /* create the shadow of the font on the right*/
     2px 1px 0px rgba(0,0,0, 1);
-    text-decoration: underline 1px;
 }
 
+main .text {
+    background-color:   #E9E7EC;
+    color:#363636 ;
+    height:80vh;
+    width: 300px;
+    overflow:auto;
+    border:8px solid #E9E7EC;
+    padding:3%;
+    box-shadow: 15px 10px;
+    margin:0 15px;
+    position: relative;
+    justify-items: center;
+}
 
-@media only screen and  (min-width: 900px) {
+main .text p {
+    margin-top: 0;
+    margin-bottom: 2em;
+    display: inline-block;
+    text-align:inherit;
+    font-family: 'Public Sans', sans-serif, Arial, Helvetica, sans-serif ;
+}
+.pretag {
+display: none;
+}
+.pretag-en {
+    display: none;
+}
+
+@media (min-width: 500px) {
     main {
-        width: 70%;
+        width: 65%;
+   }
+
+main h1 {
+    font-size: 2.1rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: auto 0;
+}
+}
+@media (min-width: 700px) {
+    main {
+        width: 65%;
+   }
+   main h1 {
+    font-size: 4rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    margin: 200px 60px;
+
     }
-    .text p {
-        margin-top: 0;
-        margin-bottom: 2em;
-        font-size: 1.3em;
-        line-height: 1.4em;
-        text-align:inherit;
+
+    main .text {
+        background-color:   #E9E7EC;
+        height:80vh;
+        width: 600px;
+        overflow:auto;
+        border:8px solid #E9E7EC;
+        padding:3%;
+        box-shadow: 15px 10px;
+        margin:0 60px;
+        position: relative;
+        justify-items: center;
     }
-    main .text h1 {
-        font-size: 3em;
-        margin: 200px 0 400px 0;
-        text-align: center;
-    }
-    main .extra1 {
-        text-align:right;
-        font-size: 1.8em;
+    main .text .extra1 {
+        text-align: left;
+        font-size: 1.2em;
+        margin: 10px 200px 40px 0;
         font-weight: bolder;
-        width: 90%;
-        margin: 160px;
+    }
 
-    }
-    main .extra1 p {
-        width: 40%;
-    }
-    main .text h3 {
-        font-size: 1.9em;
-        margin: 200px 0 300px 0;
-    }
 }
 
-@media only screen and (min-width:0px) and (max-width:1240px) {
- pre {
 
- }
-}
+@media only screen and (min-width:500px) and (max-width:1240px) {
+    .pretag {
+        font-size: 2em;
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+    }
+    .pretag-en {
+        display: none;
+    }
+   
+   }
 
 @media only screen and (min-width:1240px) {
-
-.text {
+    main .text {
         display: none;
     }
 
-body {
-    /* background-color: black; */
-    color: white;
-    height: 100%;
-    font-family: 'Noto Serif JP', serif;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    main h1 {
+        display: none;
+    }
+    main .text-jp {
+        display: inline-block;
+        font-family: 'Noto Serif JP', serif;
+        margin: 0 200px;
     }
 
-main {
-    background-image: linear-gradient(to right top, #7a7f7f, #676c6c, #56595a, #454648, #343536, #353536, #353637, #363637, #494949, #5c5c5d, #707070, #858585);
-
-    width: 100vw;
-    height: 100%;
-    margin: auto;
-    color: white;
-    text-align: center;
+    body {
+        background-color: rgba(0,0,0, 1);
+    }
+    main h2 {
+        font-size: 5rem;
+        color: #E9E7EC;
+        line-height: 1.25;
+        margin:200px 0 250px 0;
+        display: inline-block;
+        text-shadow: 
+        /* create highlights on the left */
+         0px 0.5px 0px rgba(255,255,255, 0.2), 
+         -1px 1px 0px rgba(255,255,255, 0.2), 
+         -2px 1px 0px rgba(255,255,255, 0.2), 
+         /* create the long shadow on the right */
+         30px 1px 0px rgba(231, 229, 229, 0.2);
     }
 
-.text-jp {
-    display: inline-block;
+    main .text-jp {
+        background-color:  black;
+        height:70vh;
+        width: 800px;
+        overflow:auto;
+        border:8px solid #e2e1e4;
+        padding:4%;
+        box-shadow: 30px 25px #B2B2B2;
+        margin: 100px 0 50px 0;
+        font-family: 'Noto Serif JP', serif;
+    }
 
-    margin-top: 30px;
-    margin-bottom: 2em;
-    width: 60%;
-    height: 90%;
-    text-align: left;
-    vertical-align:middle;
-    color: white;
+    main .text-jp p {
+        margin-top: 0;
+        margin-bottom: 2em;
+        font-size: 20px;
+        color: #E9E7EC;
+        font-family: 'Noto Serif JP', serif;
+    }   
+
+    main h3 {
+        display: none;
+    }
+
 }
 
-.text-jp h1 { 
-    font-size: 4rem;
-    line-height: 1.5em;
-    text-transform: uppercase;
-    text-align: left;
-    margin: 200px 0 300px 0;
-}
+@media only screen and (min-width:1240px) { 
+    main .connection  {
+        word-spacing: 20px;
+        margin: 70px 20px;
+        text-decoration: none;
+        color: inherit;
+    }
 
-.text-jp h1, h2, h3, h4 {
-    font-family: 'Noto Serif JP', serif;
-}
-
-.text-jp p {
-    margin-top: 0;
-    margin-bottom: 2em;
-    font-size: 20px;
-    font-family: 'Noto Serif JP', serif;
-    font-weight: 400;
-}
-    
-  }
-
-  @media only screen and (min-width:1240px) { 
-  main .connection  {
-    word-spacing: 20px;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-}
-    
     a.one:link {color:white} 
     a.one:visited {color: grey;}
-    a.one:hover {background:black}
+    a.one:hover {background:white}
     
     a.two:link {color:white}
     a.two:visited {color: grey;}
-    a.two:hover {background:black}
-    
-    main .connection a {
-        text-decoration: none;
-        color: inherit;
-    }
-  }
-
-  @media only screen and (max-width:1240px) { 
-    main .connection  {
-        word-spacing: 18px;
-        margin: 60px 10px;
-        text-decoration: none;
-        color: inherit;
-    }
-
-    a.one:link {color:black} 
-    a.one:visited {color:white}
-    a.one:hover {background:black}
-    
-    a.two:link {color:black}
-    a.two:visited {color:white}
-    a.two:hover {background:black}
+    a.two:hover {background:white}
     
     main .connection a {
         text-decoration: none;
@@ -251,3 +222,26 @@ main {
     }
     
     }
+
+    @media only screen and (max-width:1240px) { 
+        main .connection  {
+            word-spacing: 0px;
+            margin: 60px 20px;
+            text-decoration: none;
+            color: inherit;
+        }
+    
+        a.one:link {color:black} 
+        a.one:visited {color:white}
+        a.one:hover {background:black}
+        
+        a.two:link {color:black}
+        a.two:visited {color:white}
+        a.two:hover {background:black}
+        
+        main .connection a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        }
