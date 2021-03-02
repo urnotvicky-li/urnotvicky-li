@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700;900&display=swap');
+
 .diagonal-bg {
     position: fixed;
     top: 0;
@@ -9,7 +11,7 @@
 }
 
 body {
-    background: #c5c0b7;
+    background: #c5c0b7; 
     color: #222;
     height: 100%;
     font-family: 'Public Sans', sans-serif,"Times New Roman", serif ;
@@ -24,45 +26,55 @@ body {
 }
 
 .text h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Public Sans', sans-serif,"Times New Roman", serif ;
 }
-
-.text h1 {
-    font-size: 2.rem;
-    line-height: 1.25;
-    text-transform: uppercase;
-    margin:300px 0 400px 0;
-}
-
-.text p {
-    margin-top: 0;
-    margin-bottom: 40px;
-    font-size: 16px;
-}
-
-main {
-    width: 85%;
-    margin: 5em auto;
-    font-size: 20px;
-}
-
-@media (min-width: 300px) {
-    main {
-        width: 75%;
-   }
-   .text p {
-    margin-top: 0;
-    margin-bottom: 2em;
-    font-size: 16px;
-    line-height: 1.2;
-    }
 
 .text h1 {
     font-size: 2.3rem;
     line-height: 1.25;
     text-transform: uppercase;
+    margin:310px 0 410px 0;
 }
 
+main {
+    width: 86%;
+    margin: auto;
+}
+.text p {
+margin-top: 0;
+margin-bottom: 2em;
+font-size: 1em;
+line-height: 1.4;
+}
+
+@media (min-width: 700px) {
+    main {
+        width: 65%;
+   }
+   .text p {
+    margin-top: 0;
+    margin-bottom: 2em;
+    font-size: 1.7em;
+    line-height: 1.4;
+    }
+
+    .text p {
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    .text h1 {
+    font-size: 2.3rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    }
+
+    main {
+    width: 89%;
+    margin: 5em auto;
+    font-size: 20px;
+    } 
 }
 @media (min-width: 900px) {
     main {
@@ -70,10 +82,16 @@ main {
    }
    .text h1 {
     font-size: 3.5rem;
-    line-height: 1.25;
+    line-height: 1.26;
     text-transform: uppercase;
     }
 
+    main .text p {
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 1.3em;
+        line-height: 1.36;
+    }
 }
 main h1 {
     text-align: center;
@@ -131,7 +149,7 @@ h2:first-child {
     background-image: linear-gradient(to right, yellow 0, yellow 100%);
 } */
 
-@media (min-width: 1200px) {
+@media (min-width: 1240px) {
     .text {
         display: none;
     }
@@ -140,20 +158,31 @@ h2:first-child {
         display: inline-block;
     }
 
+    .text-jp p {
+        font-size: 1.3em ;
+        line-height: 1.45em;
+        word-spacing: 0.5rem;
+        color: hsl(0, 0%, 19%);
+        font-weight:490 ;
+        font-family: 'Noto Serif JP', serif;
+    }
+    body {
+        background: black;
+        color: #3b3b3b;
+    }
+
     main {
         width: 65%;
    }
 
     .text-jp h1 {
-    font-size: 50px;
+    font-size: 3em;
     line-height: 1.25;
     padding-bottom: 20px;
-    /* text-align: ; */
+    margin:200px 0 370px 0;
+    font-family: 'Noto Serif JP', serif;
     }
 }
-
-
-
 
 /* .parent {
     top: 90%;
@@ -174,3 +203,24 @@ h2:first-child {
     opacity: 1;
     transform: translateY(0px);
 } */
+
+
+main .connection .one {
+    position: absolute;
+    left: 0;
+    margin: 20px;
+}
+
+main .connection .two {
+    position: absolute;
+    right: 0px;
+    margin: 20px;
+    }
+
+a.one:link {color:black;}
+a.one:visited {color:grey}
+a.one:hover {background:white;}
+
+a.two:link {color:black;}
+a.two:visited {color:grey;}
+a.two:hover {background:white;}

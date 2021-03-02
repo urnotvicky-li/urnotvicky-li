@@ -1,38 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
 
-.diagonal-bg {
-    position: fixed;
-    top: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;400;700&display=swap');
+
+
 body {
-    background: #c5c0b7;
+    background: #A0A0A0;
     color: #222;
     height: 100%;
     width: 100vw;
     font-family: 'Public Sans', sans-serif,"Times New Roman", serif ;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    margin:0;
 }
 
 .text-jp {
     display: none;
 }
 
-.text h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
+main h2 {
+    display: none;
 }
-.text h1 {
-    font-size: 30px;
-    line-height: 1.25;
+
+main h1 {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    line-height: 2.1rem;
     text-transform: uppercase;
     display: inline-block;
+    text-align: center;
 
-    margin:300px 0 400px 0;
-    color: #959595;
+    margin:200px 0 200px 15px;
+    color: #E9E7EC;
     text-shadow: 
    /* create highlights on the left */
     0px 0.5px 0px rgba(255,255,255, 0.2), 
@@ -44,54 +44,111 @@ body {
     2px 1px 0px rgba(0,0,0, 1);
 }
 
-.text p {
+main .text {
+    background-color:   #E9E7EC;
+    height:80vh;
+    width: 300px;
+    overflow:auto;
+    border:8px solid #E9E7EC;
+    padding:3%;
+    box-shadow: 15px 10px;
+    margin:0 15px;
+    position: relative;
+    justify-items: center;
+}
+main .text h3 {
+    font-size: 1.2em;
+    margin: 200px 0 300px 0;
+}
+
+main .text p {
     margin-top: 0;
     margin-bottom: 2em;
     display: inline-block;
+    text-align:inherit;
+    font-family: 'Public Sans', sans-serif, Arial, Helvetica, sans-serif ;
 }
-main {
-    width: 85%;
-    margin: 5em auto;
-}
-@media (min-width: 200px) {
+
+@media (min-width: 300px) {
     main {
         width: 65%;
    }
-   .text h1 {
-    font-size: 2rem;
+main h1 {
+    font-size: 2.1rem;
     line-height: 1.25;
     text-transform: uppercase;
     display: inline-block;
 }
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
     main {
-        width: 55%;
+        width: 65%;
    }
-}
-main h1 {
-    text-align: center;
+   main h1 {
+    font-size: 5rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    }
+    main .text h3 {
+        font-size: 1.5em;
+        margin: 200px 0 300px 0;
+    }
 }
 
-@media only screen and (min-width:1200px) {
-    .text {
+
+@media only screen and (min-width:1240px) {
+    main .text {
         display: none;
     }
-    .text-jp {
+
+    main h1 {
+        display: none;
+    }
+    main .text-jp {
         display: inline-block;
     }
 
-    .text-jp h1 {
-        font-size: 4rem;
+    body {
+        background-color: rgba(0,0,0, 1);
+    }
+    main h2 {
+        font-size: 5rem;
+        color: #E9E7EC;
         line-height: 1.25;
-        text-transform: uppercase;
-        text-align: left;
+        margin:200px 0 250px 0;
+        display: inline-block;
+        text-shadow: 
+        /* create highlights on the left */
+         0px 0.5px 0px rgba(255,255,255, 0.2), 
+         -1px 1px 0px rgba(255,255,255, 0.2), 
+         -2px 1px 0px rgba(255,255,255, 0.2), 
+         /* create the long shadow on the right */
+         30px 1px 0px rgba(231, 229, 229, 0.2);
     }
 
-    .text-jp p {
+    main .text-jp {
+        background-color:  black;
+        height:70vh;
+        width: 80%;
+        overflow:auto;
+        border:8px solid #e2e1e4;
+        padding:4%;
+        box-shadow: 22px 15px #B2B2B2;
+        margin-bottom: 100px;
+    }
+
+    main .text-jp p {
         margin-top: 0;
         margin-bottom: 2em;
         font-size: 20px;
-    }    
+        color: #E9E7EC;
+    }   
 
+    main h3 {
+        display: none;
+    }
+}
+
+a {
+    margin: 10px 5px;
 }

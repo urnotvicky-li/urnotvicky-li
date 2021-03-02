@@ -1,66 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
-
-h1 {
-    border-left: 2px solid white;
-    height: 100px;
-    display: inline-block;
-    box-shadow: 2px 0px 2px black;
-}
-
 body {
-    background-color:black;
-    color: white;
+    font-family: 'Source Code Pro', sans-serif;
+}
+.wrap {
+    padding: 10% 20%;
+}
+.thin {
+    color: black;
+    flex: 1;
+    font-size: 2em;
+    line-height: 1.2;
+    text-decoration: none;
+    background-image: linear-gradient(to right, yellow 0, yellow 100%);
+    background-position: 0 1.2em;
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition:  0.5s;
+}
+.thin:hover {
+    background-size: 100% 100%;
+}
+.thin {
+    background-image: linear-gradient(to right, black 0, black 100%);
 }
 
-.top-container {
+.underlined--thick {
+    background-position: 0 -0.1em;
 
-    height: 100vh;
-    width: 100%;
-    background-color: black;
-    margin-bottom: 200px;
-
+a {
+    text-decoration: none;
 }
-
-.intro-text {
-    color: white;
-    width: 50%;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 0.5s all ease-in-out;
-}
-
-.intro-appear {
-    color: white;
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-.container {
-    width: 70%;
-    height: 100vh;
-    text-align: left;
-    font-size: 30px;
-    font-family: 'Public Sans', sans-serif;
-
-    line-height: 0.4in;
-    font-weight: lighter;
-    margin: auto;
-}
-
-@media only screen and (max-width:1100px) {
-
-    .container {
-        background: white;
-        padding: 30px;
-        color: #939393;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-
-    }
-
-
-
-
-
