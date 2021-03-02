@@ -47,7 +47,7 @@ font-size: 1em;
 line-height: 1.4;
 }
 
-@media (min-width: 700px) {
+@media only screen and  (min-width: 700px) {
     main {
         width: 65%;
    }
@@ -76,7 +76,7 @@ line-height: 1.4;
     font-size: 20px;
     } 
 }
-@media (min-width: 900px) {
+@media only screen and  (min-width: 900px) {
     main {
         width: 65%;
    }
@@ -149,7 +149,7 @@ h2:first-child {
     background-image: linear-gradient(to right, yellow 0, yellow 100%);
 } */
 
-@media (min-width: 1240px) {
+@media only screen and  (min-width: 1240px) {
     .text {
         display: none;
     }
@@ -217,10 +217,50 @@ main .connection .two {
     margin: 20px;
     }
 
-a.one:link {color:black;}
-a.one:visited {color:grey}
-a.one:hover {background:white;}
-
-a.two:link {color:black;}
-a.two:visited {color:grey;}
-a.two:hover {background:white;}
+    @media only screen and (min-width:1240px) { 
+        main .connection .one .two {
+            word-spacing: 20px;
+            margin: 70px 200px;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        a.one:link {color:white} 
+        a.one:visited {color: grey;}
+        a.one:hover {background:black}
+        
+        a.two:link {color:white}
+        a.two:visited {color: grey;}
+        a.two:hover {background:black}
+        
+        main .connection a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        
+        }
+        @media only screen and (max-width:1240px) { 
+            main .connection  {
+                word-spacing: 10px;
+                margin-top: 110px;
+                margin-bottom: 200px; 
+                text-decoration: none;
+                color: inherit;
+            }
+        
+            a.one:link {color:black} 
+            a.one:visited {color:white}
+            a.one:hover {background:black}
+            
+            a.two:link {color:black}
+            a.two:visited {color:white}
+            a.two:hover {background:black}
+            
+            main .connection a {
+                text-decoration: none;
+                color: inherit;
+            }
+            
+            }
+    

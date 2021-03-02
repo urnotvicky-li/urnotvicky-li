@@ -61,7 +61,7 @@ main .text p {
     color: black;
     }
 
-    @media (min-width: 490px) {
+@media only screen and  (min-width: 490px) {
         main {
             width: 70%;
        }
@@ -74,7 +74,7 @@ main .text p {
     }
     }
 
-@media (min-width: 700px) {
+@media only screen and (min-width: 700px) {
     main {
         width: 65%;
    }
@@ -85,7 +85,7 @@ main .text p {
     line-height: 1.4;
     }
 }
-@media (min-width: 900px) {
+@media only screen and (min-width: 900px) {
     main {
         width: 65%;
    }
@@ -102,7 +102,7 @@ main .text p {
     }
 }
 
-@media (min-width: 900px) {
+@media only screen and (min-width: 900px) {
     main {
         width: 65%;
    }
@@ -125,7 +125,7 @@ main h1 {
 }
 
 
-@media (min-width: 1240px) {
+@media only screen and (min-width: 1240px) {
     main .text {
         display: none;
     }
@@ -185,16 +185,48 @@ main {
     }
 }
 
-
+@media only screen and (min-width:1240px) { 
 main .connection .one .two {
-    word-spacing: 60px;
-    margin: auto 0;
+    word-spacing: 20px;
+    margin: 70px 0;
     text-decoration: none;
     color: inherit;
+}
+
+a.one:link {color:white} 
+a.one:visited {color: grey;}
+a.one:hover {background:black}
+
+a.two:link {color:white}
+a.two:visited {color: grey;}
+a.two:hover {background:black}
+
+main .connection a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 }
-a.one:link {color:black;} 
-a.one:hover {background:white;}
+@media only screen and (max-width:1240px) { 
+    main .connection  {
+        word-spacing: 10px;
+        margin: 60px 20px;
+        text-decoration: none;
+        color: inherit;
+    }
 
-a.two:link {color:black;}
-a.two:hover {background:white;}
+    a.one:link {color:black} 
+    a.one:visited {color:white}
+    a.one:hover {background:black}
+    
+    a.two:link {color:black}
+    a.two:visited {color:white}
+    a.two:hover {background:black}
+    
+    main .connection a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    }

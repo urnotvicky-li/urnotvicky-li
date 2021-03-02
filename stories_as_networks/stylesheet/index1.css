@@ -18,7 +18,7 @@
         height: 100vh;
         display: grid;
         grid-gap: 10px;
-        background: white;
+        background-image: radial-gradient(circle, #d1d1d1, #d6d6d6, #dcdcdc, #e1e1e1, #e7e7e7, #e3e3e3, #dfdfdf, #dbdbdb, #cccccc, #bebebe, #afafaf, #a1a1a1);
         font-size: 30px;
     
         position: absolute;
