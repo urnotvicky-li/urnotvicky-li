@@ -63,6 +63,17 @@ a {
     color: lightslategray;
 }
 
+main .extra1 {
+    text-align:right;
+    font-size: 1.25em;
+    color:#252424;
+    font-weight: bolder;
+    margin: 80px 0;
+}
+main .extra1 p {
+    width: 40%;
+}
+
 
 @media only screen and (min-width: 700px) {
     main {
