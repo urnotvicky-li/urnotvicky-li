@@ -231,8 +231,8 @@ main {
 
   @media only screen and (max-width:1240px) { 
     main .connection  {
-        word-spacing: 8px;
-        margin: 60px 20px;
+        word-spacing: 18px;
+        margin: 60px 10px;
         text-decoration: none;
         color: inherit;
     }
