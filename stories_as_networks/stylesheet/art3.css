@@ -1,7 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
+
 body {
-    font-family: 'Source Code Pro', sans-serif;
-    background-color: black;
+    background: #c5c0b7;
+    color: #222;
+    height: 100%;
+    font-family: 'Public Sans', sans-serif,"Times New Roman", serif ;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
+
+.text-jp {
+    display: none;
+}
+
+.text h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+.text h1 {
+    font-size: 27px;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+.text p {
+    margin-top: 0;
+    margin-bottom: 2em;
+    font-size: 16px;
+}
+
+main {
+    width: 85%;
+    margin: 5em auto;
+    font-size: 20px;
+}
+
+@media (min-width: 600px) {
+    main {
+        width: 75%;
+   }
+   .text p {
+    margin-top: 0;
+    margin-bottom: 2em;
+    font-size: 20px;
+}
+}
+@media (min-width: 900px) {
+    main {
+        width: 65%;
+   }
+}
+main h1 {
+    text-align: center;
+}
+
+
+/* /hover text/ */
 .wrap {
     padding: 10% 20%;
 }
@@ -50,4 +104,15 @@ h2:first-child {
     background-position: 100% -0.1em;
     transition: background 1s;
     background-image: linear-gradient(to right, yellow 0, yellow 100%);
+}
+
+
+@media (min-width: 1024px) {
+    .text {
+        display: none;
+    }
+
+    .text-jp {
+        display: inline-block;
+    }
 }

@@ -11,37 +11,87 @@ body {
     background: #c5c0b7;
     color: #222;
     height: 100%;
+    width: 100vw;
     font-family: 'Public Sans', sans-serif,"Times New Roman", serif ;
     font-size: 16px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
-h1, h2, h3, h4 {
+
+.text-jp {
+    display: none;
+}
+
+.text h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
 }
-h1 {
-    font-size: 4rem;
+.text h1 {
+    font-size: 30px;
     line-height: 1.25;
     text-transform: uppercase;
+    display: inline-block;
+
+    margin:300px 0 400px 0;
+    color: #959595;
+    text-shadow: 
+   /* create highlights on the left */
+    0px 0.5px 0px rgba(255,255,255, 0.2), 
+    -1px 1px 0px rgba(255,255,255, 0.2), 
+    -2px 1px 0px rgba(255,255,255, 0.2), 
+    /* create the long shadow on the right */
+    30px 1px 0px rgba(0,0,0, 0.2),
+    /* create the shadow of the font on the right*/
+    2px 1px 0px rgba(0,0,0, 1);
 }
-p {
+
+.text p {
     margin-top: 0;
     margin-bottom: 2em;
+    display: inline-block;
 }
 main {
-    width: 70%;
+    width: 85%;
     margin: 5em auto;
 }
-@media (min-width: 400px) {
+@media (min-width: 200px) {
     main {
         width: 65%;
    }
+   .text h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    display: inline-block;
+}
 }
 @media (min-width: 600px) {
     main {
-        width: 50%;
+        width: 55%;
    }
 }
 main h1 {
     text-align: center;
+}
+
+@media only screen and (min-width:1200px) {
+    .text {
+        display: none;
+    }
+    .text-jp {
+        display: inline-block;
+    }
+
+    .text-jp h1 {
+        font-size: 4rem;
+        line-height: 1.25;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    .text-jp p {
+        margin-top: 0;
+        margin-bottom: 2em;
+        font-size: 20px;
+    }    
+
 }

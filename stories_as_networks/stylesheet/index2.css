@@ -9,13 +9,12 @@ body {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
+    /* grid-template: 1fr 1fr / 1fr 1fr; */
     grid-gap: 10px;
-    background: white;
+    background: black;
+    font-size: 30px;
 
     position: absolute;
-    top: 50%;
-    left: 50%;
     align-items: center;
 }
 
@@ -33,7 +32,9 @@ body {
     font-size: 1.5em;
     line-height: 1.2;
     position: relative;
-    z-index: 2;
+    z-index: 1;
+    text-decoration:none; 
+    color: #939393;
 }
 
 .effect__heading:after {
@@ -56,21 +57,23 @@ body {
 
 .effect-a .effect__heading:after {
     opacity: 0;
-    bottom: 2px;
+    bottom: -7px;
     left: 0;
     height: 15px;
     width: 100%;
-    background: #000;
-    z-index: -1;
+    background: white;
+    z-index: 0;
     transform-origin: 0% 50%;
     transform: scaleX(0);
     transition: transform 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+    line-height: 1.2;
 }
 
 .effect-a .effect__subheading {
     opacity: 0;
     transform: translateX(-50%);
     transition: opacity 0.5s cubic-bezier(0.5, 0, 0.5, 1), transform 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+    border-bottom-width: 1px;
 }
 
 .effect-a:hover {
@@ -78,7 +81,7 @@ body {
 }
 
 .effect-a:hover .effect__heading:after {
-    opacity: 0.1;
+    opacity: 0.4;
     transform: scaleX(1);
 }
 
@@ -90,7 +93,7 @@ body {
 
 .effect .effect-a a {
     text-decoration: none;
-    color: black;
+    color:white;
     font-family: 'Public Sans', sans-serif;
 }
 
