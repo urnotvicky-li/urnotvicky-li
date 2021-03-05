@@ -49,15 +49,75 @@ a {
     padding-top: 50px;
 }
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 5px;
 }
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding-bottom: 15px;
+    font-weight: 200;
 }
 
 p {
-    font-size: 1.3rem;
-    line-height: 1.8rem;
+    font-size: 1.7rem;
+    line-height: 2.8rem;
+}
+
+@media only screen and (max-width:768px) {
+    .header {
+        color: white;
+        height: 90px;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 2rem;
+        padding: 0 10px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: normal;
+        align-items: center;
+        color: white;
+    }
+    
+    .navigation {
+        display: flex;
+        margin-left: 8px;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 0.8rem;
+        list-style-type: none;
+    }
+    
+    .navigation li {
+        padding: 12px;
+        text-decoration: underline 3px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .container {
+        margin: 0;
+        font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        padding: 5px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        padding-bottom: 15px;
+    }
+    
+    p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+
 }
