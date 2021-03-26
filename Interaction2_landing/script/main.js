@@ -1,5 +1,10 @@
-const myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello world!';
+// const myHeading = document.querySelector('h1');
+textContent = 'Hello world!';
+
+function dropAlert() {
+    alert("Course Projects from Parsons School of Design: Communication Design");
+}
+
 
 // document.getElementById('click-button').addEventListener("click", addText);
 
