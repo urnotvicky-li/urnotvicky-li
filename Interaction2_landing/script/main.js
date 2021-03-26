@@ -1,6 +1,4 @@
-// const myHeading = document.querySelector('h1');
-textContent = 'Hello world!';
-
+// alert window
 function dropAlert() {
     alert("Course Projects from Parsons School of Design: Communication Design");
 }
