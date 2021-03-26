@@ -1,0 +1,59 @@
+@import url("https://use.typekit.net/qea2kpa.css");
+body {
+    min-height: 100vh;
+    width: 98%;
+    display: grid;
+    padding: 20px;
+
+    background:#000;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+button {
+    font-size: 25px;
+    font-family: korolev, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: underline;
+}
+
+.container p{
+    text-align: left;
+}
+
+.container2 {
+    text-align: right;
+}
+
+h1 {
+    font-size: 80px;
+    font: green;
+    font-family: liquorstore-3d,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: korolev, sans-serif;
+    font-weight: 450;
+    font-style: italic;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+
+    background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #d89216 50%);
+    background-position: -0% 0;
+    background-size: 200% auto;
+    /* color: #222; */
+    font-size: 1em;
+    line-height: 1.15em;
+    text-decoration: none;
+    transition: background-position 0.5s ease-out;
+  }
+
+a:hover {
+    background-position: -99.99% 0;
+  }

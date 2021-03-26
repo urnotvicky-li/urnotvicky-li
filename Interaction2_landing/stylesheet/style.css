@@ -1,0 +1,57 @@
+@import url("https://use.typekit.net/qea2kpa.css");
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background:#000;
+    text-decoration: none;
+}
+
+.tag {
+    margin-bottom: 2rem;
+    padding: 1rem 7.5rem 11rem;
+    border-radius: 30px;
+    font-size: 2rem;
+    color: #fff;
+    background: #f8012d;
+    text-align: center;
+    font-family: korolev, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    box-shadow: 0 1px 15px -7.5px #000000;
+
+    position: relative;
+    text-decoration: none;
+  }
+
+.tag strong {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+
+.tag:before {
+  content: "";
+  position: absolute;
+  top: 9rem;
+  left: 2%;
+  width: 96%;
+  height: 9rem;
+  background: #fff;
+
+  border-radius: 0 0 30px 30px;
+}
+
+.tag:after {
+  content: "Vicky Li";
+  position: absolute;
+  top: 11.25rem;
+  left: 0;
+  width: 100%;
+  font-family: volina, sans-serif;
+font-weight: 500;
+font-style: normal;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  color: #000;
+}
