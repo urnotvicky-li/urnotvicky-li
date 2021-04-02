@@ -1,0 +1,58 @@
+@import url("https://use.typekit.net/byg2ter.css");
+body {
+    font-family: Arial;
+    background-image: linear-gradient(to right top, #042689, #0066bb, #009ab4, #00c793, #c8ea83);
+}
+
+.container {
+    margin: 1rem 8rem 1rem 8rem;
+}
+.song-container {
+    margin: 1.5rem 2.5rem 0 2,5rem;
+    padding: 2rem 2rem 0.5rem 2rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns:  1fr 1fr;
+    /* background-color: #fdd9c4; */
+    /* background-image: linear-gradient(to right top, #dce0df, #d8e2da, #dde2cf, #ebdfc6, #fdd9c4); */
+    background-color: #dfceb6;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    font-family: poppins, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h4 {
+    font-family: poppins, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 0.8rem;
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+   
+
+p {
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin: 2rem 0;
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+}
+
+.song_image {
+    width: 55%;
+    height: auto;
+    border-radius: 15px;
+}
