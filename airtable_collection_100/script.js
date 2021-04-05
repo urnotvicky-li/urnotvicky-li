@@ -9,64 +9,58 @@ var base = new Airtable({ apiKey: "keyCelRUKzAZcpJXJ" }).base(
     "appYBXV5xbQgaNSGw"
   );
 
-//get the "books" table from the base, select ALL the records, and specify the functions that will receive the data
-base("nature").select({}).eachPage(gotPageOfNature, gotAllNature);
+//get the "nature" table from the base, select ALL the records, and specify the functions that will receive the data
+base("nature").select({}).eachPage(gotPageOfPhotos, gotAllPhotos);
 
-// an empty array to hold our nature data
-const nature = [];
+// an empty array to hold our data
+var photos = [];
 
 // callback function that receives our data
-function gotPageOfBooks(records, fetchNextPage) {
-  console.log("gotPageOfNature()");
+function gotPageOfPhotos(records, fetchNextPage) {
+  console.log("gotPageOfPhotos()");
   // add the records from this page to our books array
-  nature.push(...records);
+  photos.push(...records);
   // request more pages
   fetchNextPage();
 }
 
 // call back function that is called when all pages are loaded
-function gotAllNature(err) {
-  console.log("gotAllNature()");
+function gotAllPhotos(err) {
+  console.log("gotAllPhotos()");
 
   // report an error, you'd want to do something better than this in production
   if (err) {
-    console.log("error loading nature");
+    console.log("error loading photos");
     console.error(err);
     return;
   }
 
   // call function to show the books
-  showNature();
+  consoleLogPhotos();
+  showPhotos();
 }
-
 ////////////////////
-
-// create the book-spines on the shelf
-function showBooks() {
-  console.log("showNature()");
-
-  // find the shelf element
-  const shelf = document.getElementById("shelf");
-
-  // loop through the books loaded from the Airtable API
-  books.forEach((book) => {
-    // create the div, set its text and class
-    const div = document.createElement("div");
-    div.innerText = book.fields.title;
-    div.classList.add("book-spine");
-    // when the user clicks this book spine, call showBook and send the book data and this spine element
-    div.addEventListener("click", () => {
-      showNature(nature, div);
-    });
-    // put the newly created book spine on the shelf
-    shelf.appendChild(div);
+// just loop through the photos and console.log them
+function consoleLogPhotos() {
+  console.log("consoleLogPhotos()");
+  photos.forEach((photo) => {
+    console.log("Photo:", photo);
   });
 }
 
-// show the detail image for a photographer, and highlight the name of the photographer
-function showNature(nature, div) {
-  console.log("showNature()", nature);
+// look through our airtable data, create elements
+function showPhotos() {
+  console.log("showPhotos()");
+  photos.forEach((photo) => {
 
-  // find the book detail element
-  const bookDetail = document.getElementById("book-detail");
+  var photoPhotographer = document.createElement("h3");
+  photoPhotographer.innerText = photo.fields.photographer;
+  document.body.append(photoPhotographer);
+
+
+  var photoImage = document.createElement("img")
+  photoImage.src = photo.fields.land_image[0].url;
+  document.body.append(landImage);
+
+});
 }
