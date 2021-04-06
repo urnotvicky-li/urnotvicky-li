@@ -39,6 +39,15 @@ function gotAllPhotos(err) {
   consoleLogPhotos();
   showPhotos();
 }
+
+record.fields = {
+  "Name"        : [record.fields.A_Name], 
+  "Status"      : [record.fields.B_IN],
+  "Location"    : [record.fields.C_Location],
+  "Out Time"    : [record.fields.D_OutTime],
+  "Return Time" : [record.fields.E_BackTime]
+};
+
 ////////////////////
 // just loop through the photos and console.log them
 function consoleLogPhotos() {
@@ -53,14 +62,45 @@ function showPhotos() {
   console.log("showPhotos()");
   photos.forEach((photo) => {
 
-  var photoPhotographer = document.createElement("h3");
-  photoPhotographer.innerText = photo.fields.photographer;
-  document.body.append(photoPhotographer);
+    // creating a new div container
+    // this is where image and info will go
+    var photoContainer = document.createElement("div");
+    photoContainer.classList.add("photo-container");
+    document.querySelector(".container").append(photoContainer);
+
+    var photoPhotographer = document.createElement("h1");
+    photoPhotographer.classList.add("photographer");
+    photoPhotographer.innerText = photo.fields.photographer;
+    photoContainer.append(photoPhotographer);
+
+    var photoImage = document.createElement("img");
+    photoImage.classList.add("image");
+    photoImage.src = photo.fields.land_image[0].url;
+    photoContainer.append(photoImage);
+
+    var photoName = document.createElement("h2");
+    photoName.classList.add("info");
+    photoName.innerText = photo.fields.name_of_image;
+    photoContainer.append(photoName);
+
+    var photoLocation = document.createElement("h3");
+    photoLocation.classList.add("info");
+    photoLocation.innerText = photo.fields.location;
+    photoContainer.append(photoLocation);
+
+    var photoYear = document.createElement("h3");
+    photoYear.classList.add("info");
+    photoYear.innerText = photo.fields.year;
+    photoContainer.append(photoYear);
+
+    //add event listener
+    //when user clicks (hover) on the name 
+    //image will apear or disappear in fullscreen size
+    photoContainer.addEventListener("click", function(){
+      photoImage.classList.toggle("active");
 
 
-  var photoImage = document.createElement("img")
-  photoImage.src = photo.fields.land_image[0].url;
-  document.body.append(landImage);
+    })
 
 });
 }
