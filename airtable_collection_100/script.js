@@ -1,6 +1,3 @@
-// console.log("testing");
-
-// load the airtable library, call it "Airtable";
 var Airtable = require("airtable");
 console.log(Airtable);
 
@@ -40,7 +37,6 @@ function gotAllPhotos(err) {
   showPhotos(photos);
   addFilterListeners();
 }
- 
 // just loop through the photos and console.log them
 function consoleLogPhotos() {
   console.log("consoleLogPhotos()");
@@ -71,10 +67,11 @@ const photoContainers = array.map((photo) => {
 });
 
 // appends coverContainers to .covers all at once.
-  // the append() method lets you append multiple elements simultaneously if you provide a comma-separated list inside the parentheses.
+
+// the append() method lets you append multiple elements simultaneously if you provide a comma-separated list inside the parentheses.
   // for example: document.body.append(element1, element2, element3). it is like writing an array without the brackets.
   // that is what the ... is for. it strips the brackets out of the array when we pass it as an argument to a function 
-    document.querySelector(".photos").append(...photoContainers);
+  document.querySelector(".photos").append(...photoContainers);
 }
 
 //function to clear the content of .covers
@@ -84,7 +81,7 @@ function clearPhotos() {
     allPhotos.removeChild(allPhotos.firstChild);
   }
 }
-
+addFilterEventListeners();
 // add filter functionality to every .filter-item
 function addFilterEventListeners() {
   const filterItems = document.querySelectorAll(".filter-item");
@@ -105,8 +102,7 @@ function addFilterEventListeners() {
       // using brackets, we can access the property of an object with a variable
       // then we pass the filtered array to showCovers()
 
-      showPhotos(photos.filter((photo) => photo.fields[category][0] === "photographer"));
+      showPhotos(photos.filter((photo) => photo.fields[category][0] === value));
     }, false);
   });
 }
-
