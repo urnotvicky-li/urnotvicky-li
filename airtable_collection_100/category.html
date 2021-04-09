@@ -5,10 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Category</title>
+     <!-- add reset to create consistency between browsers and devices. -->
+     <link rel="stylesheet" type="text/css" href="./stylesheet/reset.css">
+
+     <link rel="stylesheet" type="text/css" href="./stylesheet/category.css">
+ 
+     <!-- add link to your javascript. be sure it includes "defer" -->
+     <script type="text/javascript" src="./airtable.browser.js" defer></script>
+     <script type="text/javascript" src="./script.js" defer></script>
 </head>
 <body>
+    <div class="menu">
+        <h1>CATEGORY</h1>
+        <a href="./index.html"><h1><div class="photoContainer">PHOTOGRAPHER</h1></a>
+        <h1>TITLE</h1>
+    </div>
+
     <div class="container">
-        
+     <aside class="filter">
+            <!-- <h2>CATEGORY</h2> -->
+            <ul class="filter-list" data-category="category">
+                <li>
+                    <button class="filter-item" data-value="cityscape">Cityscape</button>
+                </li>
+                <li>
+                    <button class="filter-item" data-value="cloudscape">Cloudscape</button>
+                </li>
+                <li>
+                    <button class="filter-item" data-value="desert">Desert</button>
+                </li>
+                <li>
+                    <button class="filter-item" data-value="forest">Forest</button>
+                </li>
+                <li>
+                    <button class="filter-item" data-value="mountain">Mountain</button>
+                </li>
+                <li>
+                    <button class="filter-item" data-value="nature">Nature</button>
+                </li>
+                <li>
+                    <button class="filter-item" data-value="panorama">Panorama</button>
+                </li>
+                <li>
+                    <button class="filter-item" data-value="river">River</button>
+                </li>
+                <li>
+                    <button class="filter-item" data-value="snow">Snow</button>
+                </li>
+                <li>
+                    <button class="filter-item" data-value="sunset_sunrise">Sunset/Sunrise</button>
+                </li>
+                <li>
+                    <button class="filter-item" data-value="wild_animals">Wild Animals</button>
+                </li>
+                <li>
+                    <button class="filter-item" data-value="winter_landscape">Winter Landscape</button>
+                </li>
+            </ul>
+        </aside>
+    
+        <main class="photos"></main>
     </div>
 </body>
 </html>

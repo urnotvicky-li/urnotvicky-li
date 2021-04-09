@@ -3,15 +3,23 @@ body {
     font-family: korolev, sans-serif;
     font-weight: 700;
     font-style: italic;
-    /* background-color: black;
-    color: white; */
+    background-color: black;
+    color: white;
     height: 100%;
     width: 100%;
 }
 
 .container {
-	display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    /* position: relative; */
+    text-align: center;
+}
+
+.photo {
+    position: relative;
+    width: auto;
+    height: 100%;
 }
 
 .menu {
@@ -19,20 +27,34 @@ body {
     font-weight: 700;
     font-style: italic;
     font-size: 0.8rem;
-    opacity: 0.5;
+    opacity: 0;
 
+    padding: 1px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     text-align: center;
-    /* z-index: 10; */
+    z-index: 10;
     position: fixed;
     float: left;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
 }
 
+.menu a{
+    text-decoration:none;
+    color: white;
+    display: inline-block;
+}
+
+a:hover{
+    font-style: normal;
+    font-weight: 900;
+}
+
 .photographer {
+    position: absolute;
+    top: 2rem;
     font-size: 2.3rem;
     margin: 2rem;
     text-align: right;
@@ -68,6 +90,7 @@ body {
 .filter-list {
   list-style-type: none;
   padding-left: 0;
+
 }
 
 /* make buttons look like text */
@@ -81,7 +104,7 @@ body {
     font-family: inherit;
     font-size: inherit;
     cursor: pointer;
-
+    color: white;
   }
 
   .covers {
@@ -90,8 +113,3 @@ body {
     flex-grow: 999;
     min-width: 50%;
   }
-
-.land-image {
-width: 100%;
-height: auto;
-}
