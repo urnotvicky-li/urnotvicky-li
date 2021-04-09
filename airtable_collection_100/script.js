@@ -34,7 +34,6 @@ function gotAllPhotos(err) {
 
   // call functions to log and show the books
   consoleLogPhotos();
-  showPhotos(photos);
   addFilterListeners();
 }
 // just loop through the photos and console.log them
@@ -59,11 +58,25 @@ const photoContainers = array.map((photo) => {
   photoContainer.classList.add("photo-container");
 
   const photoImage = document.createElement("img");
-  photoImage.classList.add("land-image");
-  photoImage.src = photo.fields.land_image[0].url;
+    photoImage.classList.add("land-image");
+    photoImage.src = photo.fields.land_image[0].url;
 
-  photoContainer.append(photoImage);
+  const photoTitle = document.createElement("h2");
+    photoTitle.classList.add("photo_title");
+    photoTitle.innerText = photo.fields.title;
+        
+  const photoLocation = document.createElement("h2");
+    photoLocation.classList.add("photo_location");
+    photoLocation.innerText = photo.fields.location;
+
+  const photoYear = document.createElement("h3");
+    photoYear.classList.add("photo_year");
+    photoYear.innerText = photo.fields.year;
+
+  photoContainer.append(photoImage, photoTitle, photoLocation, photoYear);
   return photoContainer;
+
+
 });
 
 // appends coverContainers to .covers all at once.
@@ -71,12 +84,12 @@ const photoContainers = array.map((photo) => {
 // the append() method lets you append multiple elements simultaneously if you provide a comma-separated list inside the parentheses.
   // for example: document.body.append(element1, element2, element3). it is like writing an array without the brackets.
   // that is what the ... is for. it strips the brackets out of the array when we pass it as an argument to a function 
-  document.querySelector(".photos").append(...photoContainers);
+  document.querySelector(".photo-images").append(...photoContainers);
 }
 
 //function to clear the content of .covers
 function clearPhotos() {
-  const allPhotos = document.querySelector(".photos");
+  const allPhotos = document.querySelector(".photo-images");
   while (allPhotos.childNodes.length > 0) {
     allPhotos.removeChild(allPhotos.firstChild);
   }
