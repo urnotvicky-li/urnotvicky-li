@@ -13,7 +13,7 @@ var base = new Airtable({ apiKey: "keyCelRUKzAZcpJXJ" }).base(
 base("nature").select({}).eachPage(gotPageOfPhotos, gotAllPhotos);
 
 // an empty array to hold our data
-var photos = [];
+const photos = [];
 
 // callback function that receives our data
 function gotPageOfPhotos(records, fetchNextPage) {
@@ -28,27 +28,19 @@ function gotPageOfPhotos(records, fetchNextPage) {
 function gotAllPhotos(err) {
   console.log("gotAllPhotos()");
 
-  // report an error, you'd want to do something better than this in production
+// report an error, you'd want to do something better than this in production
   if (err) {
-    console.log("error loading photos");
+    console.log("error loading data");
     console.error(err);
     return;
-  }
+ }
 
-  // call function to show the books
+  // call functions to log and show the books
   consoleLogPhotos();
-  showPhotos();
+  showPhotos(photos);
+  addFilterListeners();
 }
-
-record.fields = {
-  "Name"        : [record.fields.A_Name], 
-  "Status"      : [record.fields.B_IN],
-  "Location"    : [record.fields.C_Location],
-  "Out Time"    : [record.fields.D_OutTime],
-  "Return Time" : [record.fields.E_BackTime]
-};
-
-////////////////////
+ 
 // just loop through the photos and console.log them
 function consoleLogPhotos() {
   console.log("consoleLogPhotos()");
@@ -57,50 +49,64 @@ function consoleLogPhotos() {
   });
 }
 
-// look through our airtable data, create elements
-function showPhotos() {
+function showPhotos(array) {
   console.log("showPhotos()");
-  photos.forEach((photo) => {
 
-    // creating a new div container
-    // this is where image and info will go
-    var photoContainer = document.createElement("div");
-    photoContainer.classList.add("photo-container");
-    document.querySelector(".container").append(photoContainer);
+// look through our airtable data, create elements
+// function showPhotos() {
+//   console.log("showPhotos()");
+//   photos.forEach((photo) => {
 
-    var photoPhotographer = document.createElement("h1");
-    photoPhotographer.classList.add("photographer");
-    photoPhotographer.innerText = photo.fields.photographer;
-    photoContainer.append(photoPhotographer);
+// create an array of .cover-container elements out of the array passed as an argument to this function
+const photoContainers = array.map((photo) => {
+  const photoContainer = document.createElement("div");
+  photoContainer.classList.add("photo-container");
 
-    var photoImage = document.createElement("img");
-    photoImage.classList.add("image");
-    photoImage.src = photo.fields.land_image[0].url;
-    photoContainer.append(photoImage);
+  const photoImage = document.createElement("img");
+  photoImage.classList.add("land-image");
+  photoImage.src = photo.fields.land_image[0].url;
 
-    var photoName = document.createElement("h2");
-    photoName.classList.add("info");
-    photoName.innerText = photo.fields.name_of_image;
-    photoContainer.append(photoName);
-
-    var photoLocation = document.createElement("h3");
-    photoLocation.classList.add("info");
-    photoLocation.innerText = photo.fields.location;
-    photoContainer.append(photoLocation);
-
-    var photoYear = document.createElement("h3");
-    photoYear.classList.add("info");
-    photoYear.innerText = photo.fields.year;
-    photoContainer.append(photoYear);
-
-    //add event listener
-    //when user clicks (hover) on the name 
-    //image will apear or disappear in fullscreen size
-    photoContainer.addEventListener("click", function(){
-      photoImage.classList.toggle("active");
-
-
-    })
-
+  photoContainer.append(photoImage);
+  return photoContainer;
 });
+
+// appends coverContainers to .covers all at once.
+  // the append() method lets you append multiple elements simultaneously if you provide a comma-separated list inside the parentheses.
+  // for example: document.body.append(element1, element2, element3). it is like writing an array without the brackets.
+  // that is what the ... is for. it strips the brackets out of the array when we pass it as an argument to a function 
+    document.querySelector(".photos").append(...photoContainers);
 }
+
+//function to clear the content of .covers
+function clearPhotos() {
+  const allPhotos = document.querySelector(".photos");
+  while (allPhotos.childNodes.length > 0) {
+    allPhotos.removeChild(allPhotos.firstChild);
+  }
+}
+
+// add filter functionality to every .filter-item
+function addFilterEventListeners() {
+  const filterItems = document.querySelectorAll(".filter-item");
+  filterItems.forEach((item) => {
+    item.addEventListener("click", (event) => {
+  // remove all photos first
+      clearPhotos();
+
+  // event.target means the element being clicked on. note that you need event as an argument in the event listener callback, like so: (event) => {}
+
+      // parentNode means the parent of the element. in this case, the parentNode of button.filter-item is li.
+      // however, we want to get the 'data-category' attribute of the ul that is the parent of the li, so we call parentNode twice
+
+      const category = event.target.parentNode.parentNode.getAttribute("data-category");
+      const value = event.target.getAttribute("data-value");      
+
+  // the filter() method lets us filter an array according to a condition. so if we do covers.filter((cover) => cover.fields.background[0] === "city") then it will return an array of covers with a city background
+      // using brackets, we can access the property of an object with a variable
+      // then we pass the filtered array to showCovers()
+
+      showPhotos(photos.filter((photo) => photo.fields[category][0] === "photographer"));
+    }, false);
+  });
+}
+
