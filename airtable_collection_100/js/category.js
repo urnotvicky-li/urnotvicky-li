@@ -57,26 +57,28 @@ const photoContainers = array.map((photo) => {
   const photoContainer = document.createElement("div");
   photoContainer.classList.add("photo-container");
 
-  const photoImage = document.createElement("img");
+const photoImage = document.createElement("img");
     photoImage.classList.add("land-image");
     photoImage.src = photo.fields.land_image[0].url;
 
-  const photoTitle = document.createElement("h2");
+const photoName = document.createElement("h2");
+    photoName.classList.add("photo_name");
+    photoName.innerText = photo.fields.name;
+
+const photoTitle = document.createElement("h2");
     photoTitle.classList.add("photo_title");
     photoTitle.innerText = photo.fields.title;
         
-  const photoLocation = document.createElement("h2");
+const photoLocation = document.createElement("h2");
     photoLocation.classList.add("photo_location");
     photoLocation.innerText = photo.fields.location;
 
-  const photoYear = document.createElement("h3");
+const photoYear = document.createElement("h2");
     photoYear.classList.add("photo_year");
     photoYear.innerText = photo.fields.year;
 
-  photoContainer.append(photoImage, photoTitle, photoLocation, photoYear);
+photoContainer.append(photoImage, photoName, photoTitle, photoLocation, photoYear);
   return photoContainer;
-
-
 });
 
 // appends coverContainers to .covers all at once.
@@ -94,7 +96,8 @@ function clearPhotos() {
     allPhotos.removeChild(allPhotos.firstChild);
   }
 }
-addFilterEventListeners();
+
+    addFilterEventListeners();
 // add filter functionality to every .filter-item
 function addFilterEventListeners() {
   const filterItems = document.querySelectorAll(".filter-item");

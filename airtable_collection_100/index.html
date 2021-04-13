@@ -13,16 +13,16 @@
 
     <!-- add link to your javascript. be sure it includes "defer" -->
     <script type="text/javascript" src="./airtable.browser.js" defer></script>
-    <script type="text/javascript" src="./script.js" defer></script>
+    <script type="text/javascript" src="js/script.js" defer></script>
 </head>
 
 <body>
     <div class="menu">
         <a href="./category.html"><h1>CATEGORY</h1></a>
         <a href="./index.html"><h1>PHOTOGRAPHER</h1></a>
-        <h1>TITLE</h1>
+        <div class="web"><h1>NATURE TOUR</h1></div>
     </div>
-<div class="container">
+
     <aside class="filter">
         <ul class="filter-list" data-category="photographer">
             <li>
@@ -97,8 +97,11 @@
         </ul>
     </aside>
 
-    <main class="photos"></main>
-</div>
+    <div class="container">
+        <main class="photos">
+            <div class="photo-images"></div>
+        </main>
+    </div>
 
 </body>
 </html>

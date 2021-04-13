@@ -12,17 +12,16 @@
  
      <!-- add link to your javascript. be sure it includes "defer" -->
      <script type="text/javascript" src="./airtable.browser.js" defer></script>
-     <script type="text/javascript" src="./script.js" defer></script>
+     <script type="text/javascript" src="./js/category.js" defer></script>
 </head>
 <body>
     <div class="menu">
-        <h1>CATEGORY</h1>
+        <a href="./category.html"><h1>CATEGORY</h1></a>
         <a href="./index.html"><h1><div class="photoContainer">PHOTOGRAPHER</h1></a>
-        <h1>TITLE</h1>
+        <div class="web"><h1>NATURE TOUR</h1></div>
     </div>
 
     <aside class="filter">
-        <!-- <h2>CATEGORY</h2> -->
         <ul class="filter-list" data-category="category">
             <li>
                 <button class="filter-item" data-value="cityscape">Cityscape</button>
@@ -49,9 +48,6 @@
                 <button class="filter-item" data-value="river">River</button>
             </li>
             <li>
-                <button class="filter-item" data-value="snow">Snow</button>
-            </li>
-            <li>
                 <button class="filter-item" data-value="sunset_sunrise">Sunset/Sunrise</button>
             </li>
             <li>
@@ -64,10 +60,13 @@
     </aside>
 
     <div class="container">
-     
-    
         <main class="photos">
             <div class="photo-images"></div>
+
+            <div class="photo-name"></div>
+            <div class="photo-title"></div>
+            <div class="photo-location"></div>
+            <div class="photo-year"></div>
         </main>
     </div>
 </body>
