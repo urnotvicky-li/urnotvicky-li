@@ -60,7 +60,7 @@ const photoContainers = array.map((photo) => {
 const photoImage = document.createElement("img");
     photoImage.classList.add("land-image");
     photoImage.src = photo.fields.land_image[0].url;
-
+// div container for text 
 const photoName = document.createElement("h2");
     photoName.classList.add("photo_name");
     photoName.innerText = photo.fields.name;
@@ -76,7 +76,7 @@ const photoLocation = document.createElement("h2");
 const photoYear = document.createElement("h2");
     photoYear.classList.add("photo_year");
     photoYear.innerText = photo.fields.year;
-
+// append photo text to the div 
 photoContainer.append(photoImage, photoName, photoTitle, photoLocation, photoYear);
   return photoContainer;
 });
