@@ -34,7 +34,7 @@ function gotAllPhotos(err) {
 
   // call functions to log and show the books
   consoleLogPhotos();
-  addFilterListeners();
+  addFilterEventListeners();
 }
 // just loop through the photos and console.log them
 function consoleLogPhotos() {
@@ -97,7 +97,6 @@ function clearPhotos() {
   }
 }
 
-    addFilterEventListeners();
 // add filter functionality to every .filter-item
 function addFilterEventListeners() {
   const filterItems = document.querySelectorAll(".filter-item");
@@ -118,7 +117,7 @@ function addFilterEventListeners() {
       // using brackets, we can access the property of an object with a variable
       // then we pass the filtered array to showCovers()
 
-      showPhotos(photos.filter((photo) => photo.fields[category][0] === value));
+      showPhotos(photos.filter((photo) => photo.fields[category].includes (value)));
     }, false);
   });
 }

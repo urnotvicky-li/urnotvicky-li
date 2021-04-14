@@ -130,11 +130,11 @@ a:hover{
 
 .photo-images {
     display: flex;
-    margin-left: 19rem;
+    margin-left: 20rem;
 }
 
 .land-image {
-    margin-right: 15rem;
+    margin-right: 10rem;
     height: 90%;
 } 
 
@@ -158,4 +158,9 @@ a:hover{
 
 h2 {
     margin: 0.2rem;
+}
+
+.button {
+    left: 0;
+    top:700px
 }

@@ -34,7 +34,7 @@ function gotAllPhotos(err) {
 
   // call functions to log and show the books
   consoleLogPhotos();
-  addFilterListeners();
+  addFilterEventListeners();
 }
 // just loop through the photos and console.log them
 function consoleLogPhotos() {
@@ -93,7 +93,7 @@ function clearPhotos() {
     allPhotos.removeChild(allPhotos.firstChild);
   }
 }
-addFilterEventListeners();
+
 // add filter functionality to every .filter-item
 function addFilterEventListeners() {
   const filterItems = document.querySelectorAll(".filter-item");
@@ -113,7 +113,7 @@ function addFilterEventListeners() {
   // the filter() method lets us filter an array according to a condition. so if we do covers.filter((cover) => cover.fields.background[0] === "city") then it will return an array of covers with a city background
       // using brackets, we can access the property of an object with a variable
       // then we pass the filtered array to showCovers()
-      showPhotos(photos.filter((photo) => photo.fields[category][0] === value));
+      showPhotos(photos.filter((photo) => photo.fields[category] .includes (value)));
     }, false);
       
   });
