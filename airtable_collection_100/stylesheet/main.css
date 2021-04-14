@@ -139,7 +139,7 @@ a:hover{
 }
 
 .land-image {
-    height: 85.5vh;
+    height: 86vh;
     justify-content: space-between;
     margin-right: 1.6rem;
 } 
@@ -168,7 +168,7 @@ h2 {
 /* } */
 
 /* ipad size */
-/* @media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
     .menu {
         font-size: 0.9rem;
         padding-right: 0.2rem;
@@ -193,18 +193,17 @@ h2 {
     h2{
         margin: 0.3rem;
     }
-} */
+}
 
 /* phone size */
-/* @media only screen and (max-width: 680px) {
+@media only screen and (max-width: 680px) {
     .menu {
-        font-weight: 700;
+    font-weight: 100;
     font-size: 0.6rem;
     right: auto;
-    
-    padding: 0.5px;
 
-        gap: 2rem;
+    padding: 0.5px;
+    gap: 2rem;
     float: center;
     }
     .filter .filter-item {
@@ -220,7 +219,73 @@ h2 {
         flex-grow: 1;
         top: 1rem;
     }
-    .land-image {
-        height: 30%;
+
+    /* image */
+    .photos {
+        overflow-x: auto;
+        width: auto;
+        height: 100%;
     }
-} */
+    
+    .photo-images {
+        display:flex ;
+        margin-left: 20rem;
+    }
+    
+    .land-image {
+        height: 60vh;
+        width: auto;
+        margin-right: 1.6rem;
+        margin-top: 15vh;
+    } 
+    
+    .photo_title {
+        font-weight: normal;
+        font-style: italic;
+        font-size: 1.2rem;
+    }
+    
+    .photo_location {
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.2rem;
+    }
+    
+    .photo_year {
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1rem;
+    }
+    
+    h2 {
+        margin: 0.18rem;
+    }
+
+    /* hamburger menu */
+    .header {
+        z-index: 4;
+    }
+    #toggler {
+        display: none;
+      }
+    .hamburger-container {
+        display: block;
+        width: 20px;
+        height:20px;
+        position: relative;
+        top: 16px;
+        color: red;
+    }      
+    .hamburger-container span {
+            display: block;
+            height:1px;
+            background-color:#fff;
+            position: relative;
+            transition: transform .3s ease-it-out, top .3s ease-in-out .3s;
+            top: 0;
+    }    
+    .hamburger-container span:nth-child(2) {
+            margin-top: 7px;
+    }
+
+}
