@@ -218,7 +218,7 @@ body {
     }
     .filter {
         display: flex;
-        overflow-x: scroll;
+        overflow-x: auto;
         overflow-y: hidden;
         /* float: left; */
         white-space: nowrap;
@@ -235,7 +235,7 @@ body {
         padding: 8px 9px;
         flex-shrink: 0;
     }
-    .filter, .filter-item:focus {
+    .filter, .filter-item:active {
         font-size: 1.4rem;
         font-style: normal;
         font-weight: 1000;
@@ -251,6 +251,7 @@ body {
         overflow-y: hidden;
     }
     .photo-images {
+        overflow-x: hidden;
         text-align: center;
         margin-bottom: 1rem;
     }
