@@ -115,7 +115,5 @@ function addFilterEventListeners() {
       // then we pass the filtered array to showCovers()
       showPhotos(photos.filter((photo) => photo.fields[category] .includes (value)));
     }, false);
-      
-    document.body.addFilterEventListener('touchstart', function () { });
   });
 }

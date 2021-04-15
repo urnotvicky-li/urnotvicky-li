@@ -18,12 +18,12 @@ body {
 
     position:absolute;
     top: 0;
-    right: 0;
+    right: 1.3rem;
     transform-origin: 0 0;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     text-align: center;
     position: fixed;
     float: left;
@@ -48,7 +48,6 @@ a:hover{
 }
 
 .filter {
-    margin: 0;
     margin: 1.8rem;
     flex-basis: 20rem;
     flex-grow: 1;
@@ -60,8 +59,8 @@ a:hover{
 }
 
 .filter .filter-item {
-    font-size: 1.22rem;
-    line-height:1.55 ;
+    font-size: 1.4rem;
+    line-height:1.7;
     font-style: italic;
     font-weight:normal;
     letter-spacing: 0.08rem;
@@ -179,7 +178,7 @@ h2 {
 }
 }
 /* phone size */
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 1024px) {
     body {
         height: auto;
     }
@@ -266,7 +265,7 @@ h2 {
         
         .land-image {
             text-align: center;
-            width: 40vh;
+            width: 89%;
             margin-right: 0.5rem;
             margin-top: 3vh;
         } 
