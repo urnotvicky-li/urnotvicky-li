@@ -10,28 +10,32 @@ body {
     top:0;
 }
 @media only screen and (min-width: 1024px) {
+    body {
+        height: auto;
+        width: 100%;
+    }
 .menu {
     font-family: korolev, sans-serif;
     font-weight: 700;
     font-style: italic;
     font-size: 0.8rem;
-
-    position:absolute;
-    top: 0;
     right: 1.3rem;
-    transform-origin: 0 0;
+    top: 0.2rem;
 
+    padding: 0 1px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    text-align: center;
+    text-align:center;
     position: fixed;
     float: left;
 }
 
 .menu .web{
+    color: white;
     font-style: normal;
-    opacity: 0.6;
+    opacity: 0.8;
+    letter-spacing: 1.3px;
 }
 
 .menu a {
@@ -185,13 +189,11 @@ h2 {
     .menu {
         font-weight: 100;
         font-size: 0.53rem;
-        right: 10px;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        padding: 0.5px;
-        gap: 1.7rem;
-        float: center;
+        padding-right: 19px;
+        gap: 1.3rem;
         text-align: center;
         }
         .menu a {
@@ -201,7 +203,7 @@ h2 {
         }
         .menu .web{
             font-style: normal;
-            opacity: 0.6;
+            opacity: 0.8;
         }
         /* buttons look like */
     .filter-item {

@@ -24,7 +24,7 @@ body {
     font-style: italic;
     font-size: 0.8rem;
     right: 1.3rem;
-    top: 0;
+    top: 0.2rem;
 
     padding: 0 1px;
     display: grid;
@@ -46,6 +46,7 @@ body {
     font-style: normal;
     color: white;
     opacity: 0.8;
+    letter-spacing: 1.3px;
 }
 
 a:hover{
@@ -171,17 +172,16 @@ h2 {
 @media only screen and (max-width: 1024px) {
 body {
     height: auto;
+    width: 100%;
 }
 .menu {
     font-weight: 100;
     font-size: 0.53rem;
-    right: 10px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 0.5px;
+    padding-right: 19px;
     gap: 1.3rem;
-    float: center;
     text-align: center;
     }
     .menu a {
