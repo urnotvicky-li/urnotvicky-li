@@ -116,5 +116,6 @@ function addFilterEventListeners() {
       showPhotos(photos.filter((photo) => photo.fields[category] .includes (value)));
     }, false);
       
+    document.body.addFilterEventListener('touchstart', function () { });
   });
 }

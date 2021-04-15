@@ -235,14 +235,24 @@ body {
         padding: 8px 9px;
         flex-shrink: 0;
     }
-    .filter, .filter-item:active {
+    .filter, .filter-item:focus {
         font-size: 1.4rem;
         font-style: normal;
         font-weight: 1000;
         font-style: bold;
         color: white;
         opacity: 0.9;
+        -webkit-tap-highlight-color:transparent;
     }
+    /* @media(hover: hover) and (pointer: fine) {
+        .filter, .filter-item a:hover {
+            font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 1000;
+        font-style: bold;
+        color: white;
+        opacity: 0.9;
+        } */
     .photos {
         position: absolute;
         width: 100%;
@@ -279,4 +289,5 @@ body {
     h2 {
         margin: 0.2rem 0.8rem;
     }
+   
 }
