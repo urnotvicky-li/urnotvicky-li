@@ -9,7 +9,7 @@ body {
     width: 100%;
     top:0;
 }
-
+@media only screen and (min-width: 1024px) {
 .menu {
     font-family: korolev, sans-serif;
     font-weight: 700;
@@ -109,25 +109,13 @@ a:hover{
 
 .land-image {
     /* display: flex; */
-    height: 84.5vh;
+    height: 85vh;
     width: auto; 
     margin:auto;
     margin-right: 1.6rem;
     top:0;
     /* padding-left:15rem; */
 } 
-
-/* 
-.container .filter-item {
-    width: 100vw;
-    height: auto;
-    display: inline-block;
-    position: relative;
-} */
-
-/* .filter .filter-list > div {
-    width: 100px;
-} */
 
 .container {
     overflow-x: hidden;
@@ -146,8 +134,10 @@ a:hover{
 }
 
 .photos {
+    overflow-y: hidden;
     overflow-x: auto;
     width: 100%;
+    white-space: nowrap;
 }
 
 .photo-container {
@@ -187,4 +177,119 @@ h2 {
     margin: 0.18rem;
     line-height: 1.2;
 }
-
+}
+/* phone size */
+@media only screen and (max-width: 680px) {
+    body {
+        height: auto;
+    }
+    .menu {
+        font-weight: 100;
+        font-size: 0.53rem;
+        right: 10px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0.5px;
+        gap: 1.7rem;
+        float: center;
+        text-align: center;
+        }
+        .menu a {
+            text-decoration: none;
+            color: white;
+            opacity: 0.6;
+        }
+        .menu .web{
+            font-style: normal;
+            opacity: 0.6;
+        }
+        /* buttons look like */
+    .filter-item {
+            appearance: none;
+            background: transparent;
+            border: 0;
+            outline: 0;
+            padding: 0;
+            line-height: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            cursor: pointer;
+            color: white;
+            z-index: 2;
+        }
+        
+        .filter, .filter-item {
+            font-size: 1.4rem;
+            font-style: italic;
+            font-weight:normal;
+            letter-spacing: 0.08rem;
+            opacity: 0.8;
+            color: white;
+        }
+        .filter {
+            display: flex;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            /* float: left; */
+            white-space: nowrap;
+        }
+        .filter-list {
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+        }  
+        .filter-item {
+            text-align: center;
+            margin: 12px 1px;
+            padding: 8px 6px;
+            flex-shrink: 0;
+        }
+        .filter .filter-item:focus {
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 1000;
+            font-style: bold;
+            color: white;
+            opacity: 0.9;
+        }
+        .photos {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+        .photo-images {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .land-image {
+            text-align: center;
+            width: 40vh;
+            margin-right: 0.5rem;
+            margin-top: 3vh;
+        } 
+        .photo_name {
+            font-style: normal;
+            font-size: 1.2rem;
+        }
+        .photo_title {
+            font-weight: normal;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        .photo_location {
+            font-weight: normal;
+            font-style: normal;
+            font-size: 1rem;
+        }
+        .photo_year {
+            font-weight: normal;
+            font-style: normal;
+            font-size: 1rem;
+        }
+        h2 {
+            margin: 0.2rem 1rem;
+        }
+    }
