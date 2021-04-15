@@ -221,6 +221,7 @@ body {
         overflow-y: hidden;
         /* float: left; */
         white-space: nowrap;
+        margin-bottom: 2px;
     }
     .filter-list {
         list-style-type: none;
@@ -229,7 +230,7 @@ body {
     }  
     .filter-item {
         text-align: center;
-        margin: 12px 2px;
+        margin: 6px 2px 3px 1px;
         padding: 8px 9px;
         flex-shrink: 0;
     }
@@ -246,6 +247,7 @@ body {
         width: 100%;
         height: auto;
         text-align: center;
+        overflow-y: hidden;
     }
     .photo-images {
         text-align: center;
