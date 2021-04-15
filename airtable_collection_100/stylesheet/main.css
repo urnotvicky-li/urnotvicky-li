@@ -127,8 +127,9 @@ a:hover{
 /* image and text style */
 .photos {
     overflow-x: auto;
-    width: auto;
-    height: 100%;
+    overflow-y: hidden;
+    width: 100%;
+    height: auto;
 }
 
 .photo-images {
@@ -257,7 +258,6 @@ body {
     .land-image {
         text-align: center;
         width: 40vh;
-        margin-right: 0.5rem;
         margin-top: 3vh;
     } 
     .photo_title {
