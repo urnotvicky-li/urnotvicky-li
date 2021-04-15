@@ -233,7 +233,7 @@ body {
         padding: 8px 9px;
         flex-shrink: 0;
     }
-    .filter .filter-item:focus {
+    .filter, .filter-item:focus {
         font-size: 1.4rem;
         font-style: normal;
         font-weight: 1000;
