@@ -1,0 +1,113 @@
+@import url("https://use.typekit.net/eed3tbt.css");
+@import url("https://use.typekit.net/eed3tbt.css");
+body {
+  margin: 15px 50px;
+}
+
+#slideToggle {
+  margin: auto;
+}
+
+#flip{
+margin: auto;
+width: 80%;
+}
+
+#panel, #flip{
+    padding: 10px 20px 10px 20px;
+    text-align: left;
+    background-color: #e5eecc;
+    border: solid 1px #e5eecc;
+}
+#panel {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    display: none;
+}
+
+p {
+  font-family: bely, serif;
+font-weight: 700;
+font-style: normal;
+font-size: 3rem;
+margin: auto;
+text-align: center;
+}
+
+h1 {
+  font-family: bely, serif;
+font-weight: 700;
+font-style: normal;
+text-align: center;
+}
+
+h2 {
+  font-family: objektiv-mk2, sans-serif;
+  font-weight: 510;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-family: objektiv-mk2, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 1rem;
+}
+
+/* 2nd */
+#flip2{
+  margin: auto;
+  width: 80%;
+  }
+
+#panel2 {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  display: none;
+}
+
+#panel2, #flip2{
+  padding: 10px 20px 10px 20px;
+  text-align: left;
+  background-color: #ecf0e2;
+  border: solid 8px #433c3c;
+}
+
+#slideToggle2 {
+  margin-top: 20px;
+}
+/* 3rd */
+#flip3{
+  margin: auto;
+  width: 80%;
+}
+  
+#panel3 {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  display: none;
+}
+
+#panel3, #flip3{
+  padding: 10px 20px 10px 20px;
+  text-align: left;
+  background-color: #FDF88C;
+  border: solid 1px #FDF88C;
+}
+#slideToggle3 {
+  margin-top: 20px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
