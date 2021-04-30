@@ -1,0 +1,29 @@
+@import url("https://use.typekit.net/eed3tbt.css");
+body {
+background-color: #bdc3c7;
+}
+
+span {
+    user-select: none;
+  /* pointer: default; */
+    font-weight:700;
+    font-size:150px;
+}
+
+p {
+  margin: auto;
+  text-align: center;
+  width:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  color: white;
+  font-size: 3rem;
+  opacity:40%;
+  padding-top:20px;
+  
+  font-family: rooney-web, serif;
+font-weight: 700;
+font-style: normal;
+}
