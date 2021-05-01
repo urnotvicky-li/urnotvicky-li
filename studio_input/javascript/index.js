@@ -145,12 +145,24 @@ document.addEventListener("click", function(e) {
   document.body.appendChild(div)
 })
 
-// function myFunction() {
-//   var 
+// drag function
+// let draggie = new Draggabilly('.emoji-container');
 
-// }
-while (document.querySelectorAll('.emoji-container').length > 0) {
+$(document).ready( function() {
+  var $emoji-container = $('.emoji-container').draggabilly();
+  // Draggabilly instance
+  var draggie = $emoji-container.data('draggabilly');
+  $emoji-container.on( 'dragMove', function() {
+    console.log( 'dragMove', draggie.position.x, draggie.position.y );
+  });
+});
+
+
+  function clear() { 
+    while
+  (document.querySelectorAll('.emoji-container').length > 0) {
     document.querySelector('.emoji-container').remove();
+  }
 }
 
 // while (document.querySelectorAll('.emoji-container').length > 0) {

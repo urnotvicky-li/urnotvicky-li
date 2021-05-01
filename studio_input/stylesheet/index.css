@@ -4,18 +4,23 @@ background-color: #bdc3c7;
 }
 
 .emoji-container {
-  height: 50px;
+  width: 300px;
+display: flex;
+flex-direction: column;
 }
 
 span {
+  text-align: center;
+   position: relative;
     user-select: none;
-    font-weight:700;
     font-size:130px;
     margin: auto;
 } 
 
 description {
-  font-size: 20px;
+  text-align: center;
+  position: relative;
+  font-size: 25px;
 }
 
 p {
