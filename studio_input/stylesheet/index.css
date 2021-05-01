@@ -3,11 +3,19 @@ body {
 background-color: #bdc3c7;
 }
 
+.emoji-container {
+  height: 50px;
+}
+
 span {
     user-select: none;
-  /* pointer: default; */
     font-weight:700;
-    font-size:150px;
+    font-size:130px;
+    margin: auto;
+} 
+
+description {
+  font-size: 20px;
 }
 
 p {
