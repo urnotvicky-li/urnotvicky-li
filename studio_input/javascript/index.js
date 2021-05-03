@@ -4,10 +4,12 @@ console.log("hello");
 // click anywhere on the page, emoji will shows up
 // the description of the emoji also will shows up
 
-
 function randomEmoji() {
   return 'rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})';
 }
+
+// let div = document.createElement('div');
+// div.classList.add("container")
 
 // emoji description 
 // // array with initial values
@@ -92,18 +94,12 @@ const emojiList = [
       emoji: '😲',
       description: 'Astonished Face'
     },
-    // {
-    //   emoji: '🙏',
-    //   description: 'Folded Hands'
-    // },
-    // {
-    //   emoji: '🙏',
-    //   description: 'Folded Hands'
-    // },
 ];
 
+var clickable = document.getElementById('container');
+
 // add emoji dynamically
-document.addEventListener("click", function(e) {
+clickable.addEventListener("click", function(e) {
   const div = document.createElement("div");
   div.classList.add('emoji-container');
   const emoji = document.createElement('span');
@@ -118,8 +114,6 @@ document.addEventListener("click", function(e) {
   div.style.transition = "all 0.9s";
   div.append(emoji, description);
   
-// add description of the emoji dynamically: getElementbyId   text 
-
 //   emoji position and opacity
   setTimeout(function() {
     div.style.opacity = "1";
@@ -143,28 +137,86 @@ document.addEventListener("click", function(e) {
 //     }
 //   }, 1000);
   document.body.appendChild(div)
-})
+});
 
 // drag function
 // let draggie = new Draggabilly('.emoji-container');
 
-$(document).ready( function() {
-  var $emoji-container = $('.emoji-container').draggabilly();
-  // Draggabilly instance
-  var draggie = $emoji-container.data('draggabilly');
-  $emoji-container.on( 'dragMove', function() {
-    console.log( 'dragMove', draggie.position.x, draggie.position.y );
-  });
-});
+// $(document).ready( function() {
+//   var $draggables = $('.emoji-container').draggabilly({
+//     // contain to parent element
+//     containment: true
+//   });
+// });
 
+// darg without library
+var dragItem = document.querySelector('emoji-container');
+var container = document.querySelector('container');
 
-  function clear() { 
-    while
-  (document.querySelectorAll('.emoji-container').length > 0) {
-    document.querySelector('.emoji-container').remove();
+var active = false;
+var currentX;
+var currentY;
+var initialX;
+var initialY;
+var xOffset = 0;
+var yOffset = 0;
+
+  container.addEventListener("touchstart", dragStart, false);
+  container.addEventListener("touchend", dragEnd, false);
+  container.addEventListener("touchmove", drag, false);
+
+  container.addEventListener("mousedown", dragStart, false);
+  container.addEventListener("mouseup", dragEnd, false);
+  container.addEventListener("mousemove", drag, false);
+
+  function dragStart(e) {
+    if (e.type === "touchstart") {
+      initialX = e.touches[0].clientX - xOffset;
+      initialY = e.touches[0].clientY - yOffset;
+    } else {
+      initialX = e.clientX - xOffset;
+      initialY = e.clientY - yOffset;
+    }
+
+    if (e.target === dragItem) {
+      active = true;
+    }
   }
-}
 
-// while (document.querySelectorAll('.emoji-container').length > 0) {
-//     document.querySelector('.emoji-container').remove();
-// }
+  function dragEnd(e) {
+    initialX = currentX;
+    initialY = currentY;
+
+    active = false;
+  }
+
+  function drag(e) {
+    if (active) {
+    
+      e.preventDefault();
+    
+      if (e.type === "touchmove") {
+        currentX = e.touches[0].clientX - initialX;
+        currentY = e.touches[0].clientY - initialY;
+      } else {
+        currentX = e.clientX - initialX;
+        currentY = e.clientY - initialY;
+      }
+
+      xOffset = currentX;
+      yOffset = currentY;
+
+      setTranslate(currentX, currentY, dragItem);
+    }
+  }
+
+  function setTranslate(xPos, yPos, el) {
+    el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+  }
+
+// clear emoji button 
+function myFunction() {
+  while (document.querySelectorAll('.emoji-container').length > 0) {
+    document.querySelector('.emoji-container').remove();
+}
+}

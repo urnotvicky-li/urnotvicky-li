@@ -1,26 +1,60 @@
 @import url("https://use.typekit.net/eed3tbt.css");
 body {
 background-color: #bdc3c7;
+height: 100%;
+width: 100%;
+touch-action: none;
+}
+
+#container {
+  position: relative;
+ height: 90vh;
+ background-color: cadetblue;
+
+}
+
+.container .btn{
+  position:absolute;
+  vertical-align: middle;
+  bottom: 5%;
+  margin: auto;
+  left: 40%;
+}
+
+#clearEmoji {
+  width: 200px;
+  height: 60px;
+  z-index: 5;
+  font-family: rooney-web, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+button {
+  left: 50%;
+  align-items: center;
 }
 
 .emoji-container {
   width: 300px;
-display: flex;
-flex-direction: column;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 span {
-  text-align: center;
-   position: relative;
+    text-align: center;
+    position: relative;
     user-select: none;
-    font-size:130px;
+    font-size:15vw;
     margin: auto;
 } 
 
 description {
   text-align: center;
   position: relative;
-  font-size: 25px;
+  font-size: 3vw;
 }
 
 p {
@@ -35,8 +69,9 @@ p {
   font-size: 3rem;
   opacity:40%;
   padding-top:20px;
+  z-index: 5;
   
   font-family: rooney-web, serif;
-font-weight: 700;
-font-style: normal;
+  font-weight: 700;
+  font-style: normal;
 }
