@@ -1,3 +1,13 @@
+// chinese font from adobe 
+  (function(d) {
+    var config = {
+      kitId: 'owy4qqq',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+
 // prints a message in the browser's dev tools console
 console.log("hello");
 
@@ -34,7 +44,7 @@ const emojiList = [
     },
     {
         emoji: '😠',
-        description: 'Angry Face'
+        description: '生气'
     },
     {
         emoji: '😝',
@@ -62,7 +72,7 @@ const emojiList = [
     },
     {
         emoji: '🙄',
-        description: 'Face with Rolling Eyes'
+        description: '翻白眼'
     },
     {
         emoji: '🤩',
@@ -70,11 +80,11 @@ const emojiList = [
     },
     {
         emoji: '🤡',
-        description: 'Clown Face'
+        description: '小丑脸'
     },
     {
         emoji: '🙏',
-        description: 'Folded Hands'
+        description: '双手合十'
     },
     {
       emoji: '😘',
@@ -82,15 +92,31 @@ const emojiList = [
     },
     {
       emoji: '😪',
-      description: 'Sleepy Face'
+      description: '困'
     },
     {
       emoji: '👪',
-      description: 'Family'
+      description: '家庭'
     },
     {
       emoji: '😲',
-      description: 'Astonished Face'
+      description: '震惊'
+    },
+    {
+      emoji: '🥱',
+      description: '打呵欠'
+    },
+    {
+      emoji: '🙌',
+      description: '举双手'
+    },
+    {
+      emoji: '🥶',
+      description: '冷脸'
+    },
+    {
+      emoji: '😡',
+      description: '怒火中烧'
     },
 ];
 
@@ -201,48 +227,48 @@ clickable.addEventListener("click", function(e) {
   //   }
   // }
 
-  // function setTranslate(xPos, yPos, el) {
-  //   el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
-  // }
+//   // function setTranslate(xPos, yPos, el) {
+//   //   el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+//   // }
 
-  var dragBox = function (drag, wrap) {
+//   var dragBox = function (drag, wrap) {
 
-    function getCss(ele, prop) {
-         return parseInt(window.getComputedStyle(ele)[prop]);
-    }
+//     function getCss(ele, prop) {
+//          return parseInt(window.getComputedStyle(ele)[prop]);
+//     }
 
-    var initX,
-        initY,
-        dragable = false,
-        wrapLeft = getCss(wrap, "left"),
-        wrapRight = getCss(wrap, "top");
+//     var initX,
+//         initY,
+//         dragable = false,
+//         wrapLeft = getCss(wrap, "left"),
+//         wrapRight = getCss(wrap, "top");
 
-    drag.addEventListener("mousedown", function (e) {
-         dragable = true;
-         initX = e.clientX;
-         initY = e.clientY;
-    }, false); 
+//     drag.addEventListener("mousedown", function (e) {
+//          dragable = true;
+//          initX = e.clientX;
+//          initY = e.clientY;
+//     }, false); 
 
-   document.addEventListener("mousemove", function (e) {
-         if (dragable === true ) {
-             var nowX = e.clientX,
-                 nowY = e.clientY,
-                 disX = nowX - initX,
-                 disY = nowY - initY;
-             wrap.style.left = wrapLeft + disX + "px";
-             wrap.style.top = wrapRight + disY + "px";
-         }
-    });
+//    document.addEventListener("mousemove", function (e) {
+//          if (dragable === true ) {
+//              var nowX = e.clientX,
+//                  nowY = e.clientY,
+//                  disX = nowX - initX,
+//                  disY = nowY - initY;
+//              wrap.style.left = wrapLeft + disX + "px";
+//              wrap.style.top = wrapRight + disY + "px";
+//          }
+//     });
 
-    drag.addEventListener("mouseup", function (e) {
-         dragable = false;
-         wrapLeft = getCss(wrap, "left");
-         wrapRight = getCss(wrap, "top");
-    }, false); 
+//     drag.addEventListener("mouseup", function (e) {
+//          dragable = false;
+//          wrapLeft = getCss(wrap, "left");
+//          wrapRight = getCss(wrap, "top");
+//     }, false); 
 
- };
+//  };
 
- dragBox(document.querySelector("#bar"), document.querySelector("#box"));
+//  dragBox(document.querySelector("#bar"), document.querySelector("#box"));
 
 // clear emoji button 
 function myFunction() {
