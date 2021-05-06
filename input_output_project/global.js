@@ -12,72 +12,10 @@
 console.log("hello");
 
 // click anywhere on the page, emoji will shows up
-// // the description also will shows up
+// the description also will shows up
 
-// // emoji description 
-// // // array with initial values
-// const emojiList = [
-//   {
-//       emoji: '😠',
-//       description: '生气'
-//   },
-//   {
-//       emoji: '😝',
-//       description: '吐舌'
-//   },
-//   {
-//       emoji: '🤪',
-//       description: '滑稽'
-//   },
-//   {
-//       emoji: '😱',
-//       description: '吓死了'
-//   },
-//   {
-//       emoji: '🥺',
-//       description: '	恳求的脸'
-//   },
-//   {
-//       emoji: '🥰',
-//       description: '喜笑颜开'
-//    }, 
-//   {
-//       emoji: '😂',
-//       description: '笑哭了'
-//   },
-//   {
-//       emoji: '🙄',
-//       description: '翻白眼'
-//   },
-//   {
-//       emoji: '🤩',
-//       description: '好崇拜哦'
-//   },
-//   {
-//       emoji: '🤡',
-//       description: '小丑脸'
-//   },
-//   {
-//       emoji: '🙏',
-//       description: '双手合十'
-//   },
-//   {
-//     emoji: '😘',
-//     description: '飞吻'
-//   },
-//   {
-//     emoji: '😪',
-//     description: '困'
-//   },
-//   {
-//     emoji: '👪',
-//     description: '家庭'
-//   },
-//   {
-//     emoji: '😲',
-//     description: '震惊'
-//   },
-// ];
+// emoji description 
+// array with initial values
 
 var emojiContainer = document.querySelectorAll(".emoji-container");
 emojiContainer.forEach((emoji)=>{
@@ -119,7 +57,8 @@ function showEmoji(){
       
     document.querySelector("."+randomEmoji[index]+"").style.display = "block";
 
-    // index = Math.floor(Math.random() * randomEmoji.length); if you want emoji randomly show up
+    // if you want emoji randomly show up
+// index = Math.floor(Math.random() * randomEmoji.length); 
     index = index + 1;
     
     return index;

@@ -1,6 +1,6 @@
-@import url("https://use.typekit.net/eed3tbt.css");
+@import url("https://use.typekit.net/byg2ter.css");
 body {
-background-color: cadetblue;
+background-color: rgba(240, 242, 242, 0.865);
 height: 100vh;
 width: 100vw;
 touch-action: none;
@@ -95,94 +95,233 @@ cursor: pointer;
 }
 .btn {
   position: absolute;
-  left: 40%;
-  margin: 0;
+  left: 0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
   bottom: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
 }
 
 button {
   margin: 0;
   height: 8vh;
-  bottom: 0;
-  width: 220px;
-  border-radius: 5px;
+  width: 22%;
+  border-radius: 15px;
 }
 
 #clearEmoji {
   color: black;
-  background-color: rgb(238, 243, 244);
+  background-color: rgb(181, 209, 215) ;
   z-index: 3;
-  font-family: rooney-web, serif;
+  font-family: korolev, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 2rem;
 }
 
 /* .emoji-box {
-  width: 300px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-} */
+  /* width: 300px; */
+  /* height: auto; */
+  /* display: flex;
+  flex-direction: column; */
+/* } */ 
 
 span {
-    text-align: center;
+  text-align: center;
     position: relative;
     user-select: none;
-    font-size:10vw;
+    font-size:9vw;
     margin: auto;
+    left:20% ;
     z-index: -1;
+    transform: translateX(-50%);
 } 
 
 description {
+  /* left: 50%; */
+  margin-left: 0;
+  margin-right:0;
+  transform: translateX(-50%);
+  bottom: 0;
   text-align: center;
   margin: auto;
-  left: 40%;
+  width: 200px;
   position: relative;
   font-size: 1.5rem;
-  font-family: 'hellofont-id-juejianghei', sans-serif;
+  /* font-family: 'hellofont-id-juejianghei', sans-serif;
   font-weight: 400;
+  font-style: normal; */
+  font-family: korolev, sans-serif;
+  font-weight: 300;
   font-style: normal;
   z-index: -1;
+}
+
+h1 { 
+  /* position: relative;  */
+  font-size: 1.5rem;
+  font-family: korolev, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  /* z-index: 1; */
+} 
+
+h2 {
+  /* position: relative; */
+  font-size: 1.7rem;
+  margin: 0; 
+  color: #106897;
+  /* z-index: 1; */
 }
 
 p {
   margin: auto;
   text-align: center;
-  width:35vw;
+  width:15vw;
   display: flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
-  color: black;
-  font-size: 2rem;
-  /* opacity:40%; */
+  font-size: 4rem;
   padding-top:0;
   z-index: 5;
-  
-  font-family: 'rooney-web', serif;
-  font-weight: 700;
-  font-style: normal;
 
-  background-color: rgb(238, 243, 244) ;
+  background-color: rgb(181, 209, 215) ;
   margin-top: 20px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .emoji-container {
   position: absolute;
-  width: 120px;
-  height: 150px;
+  width: 200px;
+  height: auto;
   background-color: transparent;
-  /* opacity: .5; */
-  z-index:1 ;
+  z-index: 0.5;
 }
-
 
 .emoji-container:hover {
   cursor: pointer;
 }
 
+/* popup */
+.box {
+margin-right: 0;
+right:0;
+}
+
+.question {
+  position:absolute;
+  margin-top: 30px;
+  right: 20px;
+  top:0;
+  font-size: 2em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+.question:hover {
+  background: #06D85F;
+
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 60px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 43%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h3 {
+  margin-top: 40px;
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  font-family: korolev, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 55px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  margin-bottom: 20px;
+  font-family: korolev, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+
+.popup h5 {
+  font-size:1.4rem ;
+  margin-top: 20px;
+  color: #336699;
+  font-family: korolev, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.content h5 {
+  font-size:1.4rem ;
+  margin-top: 35px;
+  color: #336699;
+}
+
+#clearEmoji h6 {
+  font-size: 1.8rem;
+  color: #336699;
+  margin: 0;
+  padding-left: 20px;
+  display: inline-block;
+}
+/*
 
 /* } */
 
