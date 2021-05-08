@@ -186,7 +186,7 @@ clickable.addEventListener("click", function(e) {
 //   emoji position and opacity
   setTimeout(function() {
     div.style.opacity = "2";
-    div.style.transition = "all 2s";
+    // div.style.transition = "all 2s";
     div.style.transform = "translateY(0px) scale(2)";
   }, 900);
   
