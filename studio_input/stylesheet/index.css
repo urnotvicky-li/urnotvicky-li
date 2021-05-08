@@ -1,88 +1,17 @@
-@import url("https://use.typekit.net/eed3tbt.css");
+@import url("https://use.typekit.net/byg2ter.css");
 body {
-background-color: cadetblue;
+  background-color: #edeae4;
 height: 100vh;
 width: 100vw;
 touch-action: none;
 margin: 0;
 }
 
-/* For mobile: screen size smaller than 768px ipad size */
-@media screen and (max-width: 768px) {
-  #container {
-  position: relative;
-  height: 92vh;
-  width: 100%;
-  background-color: cadetblue;
-  margin-top: 0;
-  top:0;
-  }
-  .emoji-container {
-    position: absolute;
-    width: 40vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-}
-span {
-    text-align: center;
-    position: relative;
-    user-select: none;
-    font-size:30vw;
-    margin: auto;
-    z-index: -1;
-} 
-description {
-  text-align: center;
-  position: relative;
-  font-size: 1.5rem;
-  font-family: hellofont-id-juejianghei, sans-serif;
-  font-weight: 50;
-  font-style: normal;
-  z-index: -1;
-}
-
-p {
-  margin: auto;
-  text-align: center;
-  width:70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-  color: white;
-  font-size: 2rem;
-  opacity:40%;
-  padding-top:20px;
-  z-index: 5;
-  
-  font-family: rooney-web, serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-button {
-  bottom: 0;
-  margin: 0;
-  height: 8vh;
-  width: 100%;
-}
-#clearEmoji {
-  z-index: 5;
-  font-family: rooney-web, serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 2rem;
-}
-}
-
-/* For Desktop: screen size greater than 768px bigger than ipad size */
-@media screen and (min-width: 768px){
 #container {
   position: relative;
   width: 100%;
   height: 92vh;
-  background-color: #5f9ea0;
+  background-color: #edeae4;
 }
 .container .btn{
   position:absolute;
@@ -97,32 +26,42 @@ button {
   margin: auto;
   bottom: 3%;
   background: transparent;
+  z-index: 5;
 }
 
 button {
   margin: 0;
   height: 8vh;
   bottom: 0;
-  width: 220px;
+  width: 30%;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
   outline: none;
+  z-index: 5;
 }
 
 #clearEmoji {
+  width: 300px;
   z-index: 5;
-  font-family: rooney-web, serif;
+  font-family: korolev, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 2rem;
   border: none;
   color: #000;
+}
 
+#clearEmoji h6 {
+  font-size: 1.8rem;
+  color: #336699;
+  margin: 0;
+  padding-left: 20px;
+  display: inline-block;
+  z-index: 5;
 }
 
 .btn：after {
-  /* position: absolute; */
   content: "";
   width: 0;
   height: 100%;
@@ -170,31 +109,165 @@ span {
 } 
 
 description {
+    color:  #285a8b;
+    left: 50%;
+    margin-left: 0;
+    margin-right:0;
+    transform: translateX(-50%);
+    bottom: 0;
+    text-align: center;
+    margin: auto;
+    width: 370px;
+    position: relative;
+    font-size: 2.4rem;
+    font-family: korolev, sans-serif;
+    font-weight: 550;
+    font-style: normal;
+    z-index: -1;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #dcc7a5;
+}
+
+english {
+  left: 50%;
+  margin-left: 0;
+  margin-right:0;
+  transform: translateX(-50%);
+  bottom: 0;
   text-align: center;
+  margin: auto;
+  width: 370px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+ 
   position: relative;
-  font-size: 3vw;
-  font-family: hellofont-id-juejianghei, sans-serif;
-  font-weight: 400;
+  font-size: 2.4rem;
+  font-family: korolev, sans-serif;
+  font-weight: 550;
   font-style: normal;
   z-index: -1;
+  background-color: #dcc7a5;
 }
 
 p {
   margin: auto;
   text-align: center;
-  width:50%;
+  width:auto;
   display: flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
   color: white;
-  font-size: 3rem;
-  opacity:40%;
+  font-size: 4.5rem;
+  opacity:80%;
   padding-top:20px;
-  z-index: 5;
+  z-index: 2;
+}
+
+/* popup-question box */
+.box {
+  margin-right: 0;
+  right:0;
+  }
   
-  font-family: rooney-web, serif;
+  .question {
+    position:absolute;
+    margin-top: 30px;
+    right: 20px;
+    top:0;
+    font-size: 2em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid #06D85F;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+  
+  .question:hover {
+    background: #06D85F;
+  
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 42%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+
+.popup h3 {
+  margin-top: 40px;
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  font-family: korolev, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 55px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
 }
+
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  margin-bottom: 20px;
+  font-family: korolev, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+
+.popup h5 {
+  font-size:1.4rem ;
+  margin-top: 20px;
+  color: #336699;
+  font-family: korolev, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.content h5 {
+  font-size:1.4rem ;
+  margin-top: 35px;
+  color: #336699;
+}
+

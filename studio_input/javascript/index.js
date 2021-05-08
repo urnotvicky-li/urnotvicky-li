@@ -1,13 +1,3 @@
-// chinese font from adobe 
-  (function(d) {
-    var config = {
-      kitId: 'owy4qqq',
-      scriptTimeout: 3000,
-      async: true
-    },
-    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-  })(document);
-
 // prints a message in the browser's dev tools console
 console.log("hello");
 
@@ -23,100 +13,153 @@ function randomEmoji() {
 const emojiList = [
     {
         emoji: '😢',
-        description: '	困'
-
+        description: '哭',
+        english: 'Crying Face'
     },
     {
         emoji: '😃',
-        description: '哈哈'
+        description: '哈哈',
+        english: 'Grinning Face'
     },
     {
         emoji: '🥳',
-        description: '聚会笑脸'
+        description: '聚会笑脸',
+        english: 'Partying Face'
     },
     {
         emoji: '👻',
-        description: '鬼'
+        description: '鬼',
+        english: 'Ghost'
     },
     {
         emoji: '😫',
-        description: '累死了'
+        description: '累死了',
+        english: 'Tired Face'
     },
     {
         emoji: '😠',
-        description: '生气'
+        description: '生气',
+        english: 'Angry Face'
     },
     {
         emoji: '😝',
-        description: '吐舌'
+        description: '吐舌',
+        english: 'Squinting Face'
     },
     {
         emoji: '🤪',
-        description: '滑稽'
+        description: '滑稽',
+        english: 'Zany Face'
     },
     {
         emoji: '😱',
-        description: '吓死了'
+        description: '吓死了',
+        english: 'Screaming in Fear'
     },
     {
         emoji: '🥺',
-        description: '喜笑颜开'
+        description: '恳求的脸',
+        english: 'Pleading Face'
     },
     {
         emoji: '🥰',
-        description: '喜笑颜开'
+        description: '喜笑颜开',
+        english: 'Smiling Face'
      }, 
     {
         emoji: '😂',
-        description: '笑哭了'
+        description: '笑哭了',
+        english: 'Face with Tears of Joy'
     },
     {
         emoji: '🙄',
-        description: '翻白眼'
+        description: '翻白眼',
+        english: 'Face with Rolling Eyes'
     },
     {
         emoji: '🤩',
-        description: '好崇拜哦'
+        description: '好崇拜哦',
+        english: 'Star-Struck'
     },
     {
         emoji: '🤡',
-        description: '小丑脸'
+        description: '小丑脸',
+        english: 'Clown Face'
     },
     {
         emoji: '🙏',
-        description: '双手合十'
+        description: '双手合十',
+        english: 'Folded Hands'
     },
     {
       emoji: '😘',
-      description: '飞吻'
-    },
-    {
-      emoji: '😪',
-      description: '困'
-    },
-    {
-      emoji: '👪',
-      description: '家庭'
-    },
-    {
-      emoji: '😲',
-      description: '震惊'
-    },
-    {
-      emoji: '🥱',
-      description: '打呵欠'
-    },
-    {
-      emoji: '🙌',
-      description: '举双手'
+      description: '飞吻',
+      english: 'Blowing a Kiss'
     },
     {
       emoji: '🥶',
-      description: '冷脸'
+      description: '冷脸',
+      english: 'Cold Face'
+    },
+    {
+      emoji: '👪',
+      description: '家庭',
+      english: 'Family'
+    },
+    {
+      emoji: '😲',
+      description: '震惊',
+      english: 'Astonished Face'
+    },
+    {
+      emoji: '🥱',
+      description: '打呵欠',
+      english: 'Yawning Face'
+    },
+    {
+      emoji: '🙌',
+      description: '举双手',
+      english: 'Raising Hands'
+    },
+    {
+      emoji: '🥶',
+      description: '冷脸',
+      english: 'Cold Face'
     },
     {
       emoji: '😡',
-      description: '怒火中烧'
+      description: '怒火中烧',
+      english: 'Pouting Face'
+    },
+    {
+      emoji: '😈',
+      description: '恶魔微笑',
+      english: 'Smiling Face with Horns'
+    },
+    {
+      emoji: '🤧',
+      description: '	打喷嚏',
+      english: 'Sneezing Face'
+    },
+    {
+      emoji: '😺',
+      description: '大笑的猫',
+      english: 'Grinning Cat'
+    },
+    {
+      emoji: '💔',
+      description: '心碎',
+      english: 'Broken Heart'
+    },
+    {
+      emoji: '🧧',
+      description: '红包',
+      english: 'Red Envelope'
+    },
+    {
+      emoji: '😑',
+      description: '无语',
+      english: 'Expressionless Face'
     },
 ];
 
@@ -128,43 +171,32 @@ clickable.addEventListener("click", function(e) {
   div.classList.add('emoji-container');
   const emoji = document.createElement('span');
   const description = document.createElement('description');
+  const english = document.createElement('english');
   const rand = Math.floor(Math.random() * emojiList.length);
   emoji.append(emojiList[rand].emoji);
   description.append(emojiList[rand].description);
+  english.append(emojiList[rand].english);
   div.style.position = "absolute";
   div.style.emoji = randomEmoji();
   div.style.left = e.pageX + "px";
   div.style.top = e.pageY + "px";
-  div.style.transition = "all 0.9s";
-  div.append(emoji, description);
+  div.style.transition = "all 1.9s";
+  div.append(emoji, description, english);
   
 //   emoji position and opacity
   setTimeout(function() {
-    div.style.opacity = "1";
-    div.style.transform = "translateY(-50px) scale(1.8)";
-  }, 800);
+    div.style.opacity = "2";
+    div.style.transition = "all 2s";
+    div.style.transform = "translateY(0px) scale(2)";
+  }, 900);
   
   setTimeout(function() {
     div.style.opacity = "1";
-    div.style.transform = "translateY(-100px) scale(0.8)";
-  }, 800);
+    div.style.transform = "translateY(-100px) scale(0.5)";
+  }, 900);
   
-// for loop
-//   setTimeout(function() {
-//     let spanChilds = document.querySelector("span");
-//     for (let i = 0; i < spanChilds.length; i++)   {
-//     //   let item = arr[i];
-//     //   console.log(item);
-//       if (spanChilds[i].style.opacity === "0") {
-//         document.body.removeChild(spanChilds[i])
-//         }
-//     }
-//   }, 1000);
   document.body.appendChild(div)
 });
-
-// drag function
-
 
 // clear emoji button 
 function myFunction() {
