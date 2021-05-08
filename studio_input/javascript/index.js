@@ -180,7 +180,7 @@ clickable.addEventListener("click", function(e) {
   div.style.emoji = randomEmoji();
   div.style.left = e.pageX + "px";
   div.style.top = e.pageY + "px";
-  div.style.transition = "all 1.9s";
+  div.style.transition = "all 2s";
   div.append(emoji, description, english);
   
 //   emoji position and opacity
