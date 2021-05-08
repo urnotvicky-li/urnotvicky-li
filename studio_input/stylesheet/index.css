@@ -27,6 +27,7 @@ margin: 0;
   bottom: 3%;
   background: transparent;
   z-index: 5;
+  color: rgb(211, 181, 181);
 }
 
 button {
@@ -35,7 +36,6 @@ button {
   bottom: 0;
   width: 30%;
   border-radius: 5px;
-  color: #fff;
   cursor: pointer;
   outline: none;
   z-index: 5;
@@ -50,11 +50,12 @@ button {
   font-size: 2rem;
   border: none;
   color: #000;
+  background-color: rgb(151, 180, 146);
 }
 
 #clearEmoji h6 {
   font-size: 1.8rem;
-  color: #336699;
+  color:  #285a8b;
   margin: 0;
   padding-left: 20px;
   display: inline-block;
